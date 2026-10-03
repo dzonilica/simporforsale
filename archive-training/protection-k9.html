@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title data-i18n="prot.title">Protection &amp; K9 Work, Simpor Dog Center</title>
+<meta name="description" content="Simpor Protection & K9 programs: personal protection, property and facility protection, sport protection IGP 1-3, civil K9, and KKL/ZTP breeding license preparation."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<script src="js/lang.js" defer></script>
+<style>
+.level-card{ display:grid; grid-template-columns:1.1fr 1fr; gap:60px; align-items:center; margin-bottom:80px; }
+.level-card.reverse{ direction:rtl; }
+.level-card.reverse > *{ direction:ltr; }
+.level-card .level-media{ border-radius:var(--radius-lg); overflow:hidden; aspect-ratio:4/5; background:#0f0f11; }
+.level-card .level-media img{ width:100%; height:100%; object-fit:cover; transition:transform 1.2s var(--ease); }
+.level-card:hover .level-media img{ transform:scale(1.03); }
+.level-body .level-tag{ display:inline-block; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+.level-body h2{ margin:0 0 20px; }
+.tag-row{ display:flex; flex-wrap:wrap; gap:8px; margin-top:24px; }
+.tag-row span{ padding:6px 14px; border:1px solid var(--line-dark); border-radius:999px; font-size:12px; letter-spacing:.08em; color:var(--ink-dim); }
+section.light .tag-row span{ border-color:var(--line-light); color:var(--ink-dark-2); }
+.gal-strip{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:14px; }
+.gal-strip .gal-thumb{ aspect-ratio:1/1; overflow:hidden; border-radius:10px; cursor:pointer; background:#0f0f11; }
+.gal-strip .gal-thumb img{ width:100%; height:100%; object-fit:cover; transition:transform .6s var(--ease), filter .3s ease; filter:brightness(.92); }
+.gal-strip .gal-thumb:hover img{ transform:scale(1.08); filter:brightness(1); }
+.video-block{ margin:48px auto 0; max-width:820px; }
+.video-block .v-eyebrow{ font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); text-align:center; margin-bottom:18px; }
+.video-block .v-card{ display:block; border-radius:var(--radius-lg); overflow:hidden; background:#000; border:1px solid var(--line-dark); }
+.video-block .v-title{ padding:14px 18px; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--ink-dim); border-bottom:1px solid var(--line-dark); background:var(--bg-2); }
+.video-block .v-frame{ position:relative; padding-bottom:56.25%; overflow:hidden; }
+.video-block .v-frame img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .6s var(--ease); }
+.video-block .v-card:hover .v-frame img{ transform:scale(1.04); }
+.video-block .v-play{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); opacity:.9; pointer-events:none; filter:drop-shadow(0 2px 12px rgba(0,0,0,.6)); }
+.video-block video{ width:100%; display:block; aspect-ratio:16/9; background:#000; }
+.video-grid-2{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+@media (max-width: 900px){
+  .level-card{ grid-template-columns:1fr; gap:32px; margin-bottom:56px; }
+  .video-grid-2{ grid-template-columns:1fr; }
+}
+#lb{ position:fixed; inset:0; background:rgba(0,0,0,.94); backdrop-filter:blur(10px); z-index:200; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .3s ease; }
+#lb.open{ opacity:1; pointer-events:all; }
+#lb img{ max-width:88vw; max-height:86vh; object-fit:contain; border:1px solid rgba(200,164,91,.25); border-radius:8px; }
+#lb .lb-close, #lb .lb-prev, #lb .lb-next{ position:absolute; color:var(--gold); background:rgba(200,164,91,.1); border:1px solid rgba(200,164,91,.25); font-size:20px; cursor:pointer; padding:12px 16px; border-radius:8px; transition:background .3s; }
+#lb .lb-close{ top:28px; right:36px; }
+#lb .lb-prev{ left:28px; top:50%; transform:translateY(-50%); }
+#lb .lb-next{ right:28px; top:50%; transform:translateY(-50%); }
+#lb .lb-close:hover, #lb .lb-prev:hover, #lb .lb-next:hover{ background:rgba(200,164,91,.22); }
+</style>
+</head>
+<body>
+
+<div id="loader"><div class="loader-mark">SIM<em>POR</em></div></div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-brand">SIM<em>POR</em></a>
+  <ul class="nav-links">
+    <li><a href="obedience.html" class="has-caret" data-i18n="nav.training">Training Services</a>
+      <ul class="submenu">
+        <li><a href="obedience.html" data-i18n="nav.training.obedience">Obedience (All Breeds)</a></li>
+        <li><a href="protection-k9.html" data-i18n="nav.training.protection">Protection &amp; K9 Work</a></li>
+        <li><a href="show-sport.html" data-i18n="nav.training.showsport">Show &amp; Sport</a></li>
+        <li><a href="bh-igp.html" data-i18n="nav.training.bhigp">BH / IGP Foundation</a></li>
+        <li><a href="kkl-ztp.html" data-i18n="nav.training.kklztp">KKL &amp; ZTP Licenses</a></li>
+        <li><a href="k9-programs.html" data-i18n="nav.training.k9">K9 Programs</a></li>
+      </ul>
+    </li>
+    <li><a href="available-dogs.html" data-i18n="nav.available">Available Dogs</a></li>
+    <li><a href="about.html" data-i18n="nav.about">About</a></li>
+    <li><a href="how-it-works.html" data-i18n="nav.process">Process</a></li>
+    <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:+381644919030" class="nav-login">+381 64 4919030</a>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+      <span class="lang-sep">/</span>
+      <button class="lang-btn" data-lang="sr" onclick="setLang('sr')">SR</button>
+    </div>
+    <a href="contact.html" class="nav-cta" data-i18n="nav.book">Book a Call</a>
+    <button class="hamburger" id="hamburger" data-i18n-aria="nav.hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" data-i18n="mobile.home">Home</a>
+  <div class="mobile-submenu">
+    <button class="mobile-submenu-toggle" data-i18n="mobile.training">Training Services</button>
+    <div class="mobile-submenu-items">
+      <a href="obedience.html" data-i18n="nav.training.obedience">Obedience (All Breeds)</a>
+      <a href="protection-k9.html" data-i18n="nav.training.protection">Protection &amp; K9 Work</a>
+      <a href="show-sport.html" data-i18n="nav.training.showsport">Show &amp; Sport</a>
+      <a href="bh-igp.html" data-i18n="nav.training.bhigp">BH / IGP Foundation</a>
+      <a href="kkl-ztp.html" data-i18n="nav.training.kklztp">KKL &amp; ZTP Licenses</a>
+      <a href="k9-programs.html" data-i18n="nav.training.k9">K9 Programs</a>
+    </div>
+  </div>
+  <a href="available-dogs.html" data-i18n="mobile.available">Available Dogs</a>
+  <a href="about.html" data-i18n="mobile.about">About</a>
+  <a href="how-it-works.html" data-i18n="mobile.process">Process</a>
+  <a href="testimonials.html" data-i18n="mobile.testimonials">Testimonials</a>
+  <a href="faq.html" data-i18n="mobile.faq">FAQ</a>
+  <a href="contact.html" data-i18n="mobile.contact">Contact</a>
+  <div class="lang-switcher">
+    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    <span class="lang-sep">/</span>
+    <button class="lang-btn" data-lang="sr" onclick="setLang('sr')">SR</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="prot.hero.eyebrow">Category 02 · Protection &amp; K9 Work</span>
+    <h1 data-i18n="prot.hero.h1">Protection &amp; K9 Work.</h1>
+    <p class="lead" data-i18n="prot.hero.lead">From personal protection and sport-level bite-work to police K9 preparation and breeding licenses, professional programs for serious working dog goals.</p>
+    <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;">
+      <a href="contact.html" class="btn btn-primary btn-arrow" data-i18n="prot.hero.cta1">Enquire About Training</a>
+      <a href="obedience.html" class="btn btn-outline" data-i18n="prot.hero.cta2">← Obedience Programs</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding:0;">
+  <img src="images/protection1/467.jpeg" alt="Protection training" style="width:100%;height:60vh;object-fit:cover;"/>
+</section>
+
+<!-- OVERVIEW VIDEO -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="prot.ov.eyebrow">Protection &amp; K9 Overview</span>
+      <h2 data-i18n="prot.ov.h2">Five programs. One professional standard.</h2>
+      <p data-i18n="prot.ov.p">Every protection dog is trained to a single non-negotiable principle, control comes before power. The dog that cannot be called off is not a protection dog; it is a liability.</p>
+    </div>
+    <div class="video-block" style="margin-top:0;">
+      <a class="v-card" href="https://www.youtube.com/watch?v=Hyd0YE71UEM" target="_blank" rel="noopener">
+        <div class="v-title">Protection &amp; K9, Overview</div>
+        <div class="v-frame">
+          <img src="https://img.youtube.com/vi/Hyd0YE71UEM/hqdefault.jpg" alt="Protection K9 Overview" loading="lazy"/>
+          <div class="v-play"><svg viewBox="0 0 68 48" width="60" height="42"><path d="M66.52 7.74A8.54 8.54 0 0 0 60.7 1.9C55.4 0 34 0 34 0S12.6 0 7.3 1.9A8.54 8.54 0 0 0 1.48 7.74C0 13.07 0 24 0 24s0 10.93 1.48 16.26A8.54 8.54 0 0 0 7.3 46.1C12.6 48 34 48 34 48s21.4 0 26.7-1.9a8.54 8.54 0 0 0 5.82-5.84C68 34.93 68 24 68 24s0-10.93-1.48-16.26z" fill="#ff0000"/><path d="M27 34l18-10-18-10v20z" fill="#fff"/></svg></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 01: PERSONAL PROTECTION -->
+<section class="soft">
+  <div class="wrap">
+    <div class="level-card">
+      <div class="level-media"><img src="images/protection1/467.jpeg" alt="Personal Protection"/></div>
+      <div class="level-body">
+        <span class="level-tag" data-i18n="prot.p1.tag">Protection 01</span>
+        <h2 data-i18n="prot.p1.h2">Personal Protection.</h2>
+        <p data-i18n="prot.p1.p">This personal protection program is intended for dogs trained to protect their owner and family in real-life situations. The training is based on control, stability, and proper evaluation of situations, with special emphasis on reliable performance without uncontrolled aggression. The goal: a dog that remains calm in everyday surroundings, yet responds decisively when necessary.</p>
+        <div class="tag-row">
+          <span data-i18n="prot.p1.t1">Owner Protection</span>
+          <span data-i18n="prot.p1.t2">Family Safety</span>
+          <span data-i18n="prot.p1.t3">Controlled Aggression</span>
+        </div>
+        <div class="gal-strip">
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/protection1/467.jpeg","images/protection1/76.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.48.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.49.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.492.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.493.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.494.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.4956.jpeg"]' data-idx="0"><img src="images/protection1/467.jpeg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/protection1/467.jpeg","images/protection1/76.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.48.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.49.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.492.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.493.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.494.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.4956.jpeg"]' data-idx="1"><img src="images/protection1/76.jpeg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/protection1/467.jpeg","images/protection1/76.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.48.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.49.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.492.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.493.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.494.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.4956.jpeg"]' data-idx="2"><img src="images/protection1/WhatsApp Image 2026-04-12 at 00.31.48.jpeg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/protection1/467.jpeg","images/protection1/76.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.48.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.49.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.492.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.493.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.494.jpeg","images/protection1/WhatsApp Image 2026-04-12 at 00.31.4956.jpeg"]' data-idx="3"><img src="images/protection1/WhatsApp Image 2026-04-12 at 00.31.49.jpeg" alt=""/></div>
+        </div>
+      </div>
+    </div>
+    <div class="video-block">
+      <p class="v-eyebrow" data-i18n="prot.p1.watch">Watch in Action · Personal Protection</p>
+      <a class="v-card" href="https://www.youtube.com/watch?v=i5SLVNTkXBg" target="_blank" rel="noopener">
+        <div class="v-title">Personal Protection</div>
+        <div class="v-frame">
+          <img src="https://img.youtube.com/vi/i5SLVNTkXBg/hqdefault.jpg" alt="Personal Protection" loading="lazy"/>
+          <div class="v-play"><svg viewBox="0 0 68 48" width="60" height="42"><path d="M66.52 7.74A8.54 8.54 0 0 0 60.7 1.9C55.4 0 34 0 34 0S12.6 0 7.3 1.9A8.54 8.54 0 0 0 1.48 7.74C0 13.07 0 24 0 24s0 10.93 1.48 16.26A8.54 8.54 0 0 0 7.3 46.1C12.6 48 34 48 34 48s21.4 0 26.7-1.9a8.54 8.54 0 0 0 5.82-5.84C68 34.93 68 24 68 24s0-10.93-1.48-16.26z" fill="#ff0000"/><path d="M27 34l18-10-18-10v20z" fill="#fff"/></svg></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 02: PROPERTY & FACILITY PROTECTION -->
+<section>
+  <div class="wrap">
+    <div class="level-card reverse">
+      <div class="level-media"><img src="images/protection2/345.jpeg" alt="Property Protection"/></div>
+      <div class="level-body">
+        <span class="level-tag" data-i18n="prot.p2.tag">Protection 02</span>
+        <h2 data-i18n="prot.p2.h2">Property &amp; Facility Protection.</h2>
+        <p data-i18n="prot.p2.p">This training program is designed for the protection of property, buildings, and facilities. Dogs are trained for controlled territorial guarding, proper reaction to unauthorized entry, and reliable work in different conditions, including night work and work on larger areas. Special attention is given to character stability and obedience.</p>
+        <div class="tag-row">
+          <span data-i18n="prot.p2.t1">Property Guard</span>
+          <span data-i18n="prot.p2.t2">Night Operations</span>
+          <span data-i18n="prot.p2.t3">Large Area Coverage</span>
+        </div>
+        <div class="gal-strip">
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/protection2/345.jpeg","images/protection2/66.jpeg","images/protection2/WhatsApp Image 2026-04-12 at 00.36.38.jpeg","images/protection2/WhatsApp Image 2026-04-12 at 00.36.3954.jpeg","images/protection2/WhatsApp Image 2026-04-12 at 00.36.4045.jpeg","images/protection2/WhatsApp Image 2026-04-12 at 00.36.4054.jpeg"]' data-idx="0"><img src="images/protection2/345.jpeg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/protection2/345.jpeg","images/protection2/66.jpeg","images/protection2/WhatsApp Image 2026-04-12 at 00.36.38.jpeg","images/protection2/WhatsApp Image 2026-04-12 at 00.36.3954.jpeg","images/protection2/WhatsApp Image 2026-04-12 at 00.36.4045.jpeg","images/protection2/WhatsApp Image 2026-04-12 at 00.36.4054.jpeg"]' data-idx="1"><img src="images/protection2/66.jpeg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/protection2/345.jpeg","images/protection2/66.jpeg","images/protection2/WhatsApp Image 2026-04-12 at 00.36.38.jpeg","images/protection2/WhatsApp Image 2026-04-12 at 00.36.3954.jpeg","images/protection2/WhatsApp Image 2026-04-12 at 00.36.4045.jpeg","images/protection2/WhatsApp Image 2026-04-12 at 00.36.4054.jpeg"]' data-idx="2"><img src="images/protection2/WhatsApp Image 2026-04-12 at 00.36.38.jpeg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/protection2/345.jpeg","images/protection2/66.jpeg","images/protection2/WhatsApp Image 2026-04-12 at 00.36.38.jpeg","images/protection2/WhatsApp Image 2026-04-12 at 00.36.3954.jpeg","images/protection2/WhatsApp Image 2026-04-12 at 00.36.4045.jpeg","images/protection2/WhatsApp Image 2026-04-12 at 00.36.4054.jpeg"]' data-idx="3"><img src="images/protection2/WhatsApp Image 2026-04-12 at 00.36.3954.jpeg" alt=""/></div>
+        </div>
+      </div>
+    </div>
+    <div class="video-block">
+      <p class="v-eyebrow" data-i18n="prot.p2.watch">Watch in Action · Property &amp; Facility</p>
+      <a class="v-card" href="https://www.youtube.com/watch?v=zqIOMPlosa8" target="_blank" rel="noopener">
+        <div class="v-title">Property &amp; Facility Protection</div>
+        <div class="v-frame">
+          <img src="https://img.youtube.com/vi/zqIOMPlosa8/hqdefault.jpg" alt="Property Protection" loading="lazy"/>
+          <div class="v-play"><svg viewBox="0 0 68 48" width="60" height="42"><path d="M66.52 7.74A8.54 8.54 0 0 0 60.7 1.9C55.4 0 34 0 34 0S12.6 0 7.3 1.9A8.54 8.54 0 0 0 1.48 7.74C0 13.07 0 24 0 24s0 10.93 1.48 16.26A8.54 8.54 0 0 0 7.3 46.1C12.6 48 34 48 34 48s21.4 0 26.7-1.9a8.54 8.54 0 0 0 5.82-5.84C68 34.93 68 24 68 24s0-10.93-1.48-16.26z" fill="#ff0000"/><path d="M27 34l18-10-18-10v20z" fill="#fff"/></svg></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 03: SPORT PROTECTION IGP 1-3 -->
+<section class="soft">
+  <div class="wrap">
+    <div class="level-card">
+      <div class="level-media"><img src="images/protection3/23.jpeg" alt="Sport Protection IGP"/></div>
+      <div class="level-body">
+        <span class="level-tag" data-i18n="prot.p3.tag">Protection 03</span>
+        <h2 data-i18n="prot.p3.h2">Sport Protection, IGP 1–3.</h2>
+        <p data-i18n="prot.p3.p">This sport protection program includes training in accordance with the rules of IGP 1–3. The training develops working drives, bite-work technique, control, speed, and precision. This type of protection work is the foundation of working dog sport and serves as the basis for further sport or professional programs, with a clear focus on correct structure and proper working technique.</p>
+        <div class="tag-row">
+          <span data-i18n="prot.p3.t1">IGP 1</span>
+          <span data-i18n="prot.p3.t2">IGP 2</span>
+          <span data-i18n="prot.p3.t3">IGP 3</span>
+          <span data-i18n="prot.p3.t4">FCI Sport Rules</span>
+        </div>
+        <div class="gal-strip">
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/protection3/23.jpeg","images/protection3/WhatsApp Image 2026-04-12 at 00.36.40.jpeg","images/protection3/WhatsApp Image 2026-04-12 at 00.36.404343.jpeg"]' data-idx="0"><img src="images/protection3/23.jpeg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/protection3/23.jpeg","images/protection3/WhatsApp Image 2026-04-12 at 00.36.40.jpeg","images/protection3/WhatsApp Image 2026-04-12 at 00.36.404343.jpeg"]' data-idx="1"><img src="images/protection3/WhatsApp Image 2026-04-12 at 00.36.40.jpeg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/protection3/23.jpeg","images/protection3/WhatsApp Image 2026-04-12 at 00.36.40.jpeg","images/protection3/WhatsApp Image 2026-04-12 at 00.36.404343.jpeg"]' data-idx="2"><img src="images/protection3/WhatsApp Image 2026-04-12 at 00.36.404343.jpeg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/protection3/23.jpeg","images/protection3/WhatsApp Image 2026-04-12 at 00.36.40.jpeg","images/protection3/WhatsApp Image 2026-04-12 at 00.36.404343.jpeg"]' data-idx="0"><img src="images/protection3/23.jpeg" alt=""/></div>
+        </div>
+      </div>
+    </div>
+    <div class="video-block">
+      <p class="v-eyebrow" data-i18n="prot.p3.watch">Watch in Action · Sport Protection IGP 1–3</p>
+      <div class="video-grid-2">
+        <a class="v-card" href="https://www.youtube.com/watch?v=DklYyjReQQg" target="_blank" rel="noopener">
+          <div class="v-title">Sport Protection, IGP 1–3</div>
+          <div class="v-frame">
+            <img src="https://img.youtube.com/vi/DklYyjReQQg/hqdefault.jpg" alt="Sport Protection IGP" loading="lazy"/>
+            <div class="v-play"><svg viewBox="0 0 68 48" width="60" height="42"><path d="M66.52 7.74A8.54 8.54 0 0 0 60.7 1.9C55.4 0 34 0 34 0S12.6 0 7.3 1.9A8.54 8.54 0 0 0 1.48 7.74C0 13.07 0 24 0 24s0 10.93 1.48 16.26A8.54 8.54 0 0 0 7.3 46.1C12.6 48 34 48 34 48s21.4 0 26.7-1.9a8.54 8.54 0 0 0 5.82-5.84C68 34.93 68 24 68 24s0-10.93-1.48-16.26z" fill="#ff0000"/><path d="M27 34l18-10-18-10v20z" fill="#fff"/></svg></div>
+          </div>
+        </a>
+        <div class="v-card">
+          <div class="v-title">Protection &amp; IGP 1–3</div>
+          <video controls preload="metadata"><source src="igp-1-3.mp4" type="video/mp4"/></video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04: CIVIL PROTECTION K9 -->
+<section>
+  <div class="wrap">
+    <div class="level-card reverse">
+      <div class="level-media"><img src="images/prot4K9civil/2.jpeg" alt="Civil K9 Program"/></div>
+      <div class="level-body">
+        <span class="level-tag" data-i18n="prot.p4.tag">Protection 04</span>
+        <h2 data-i18n="prot.p4.h2">Civil Protection, K9 Program.</h2>
+        <p data-i18n="prot.p4.p">The Civil K9 program is designed for dogs trained for professional protection and official duties in real-life conditions. The training combines obedience, protection work, and stability in urban environments. The program is adapted to the requirements of private security, as well as preparation for work within professional K9 systems, with a high level of control and reliability.</p>
+        <div class="tag-row">
+          <span data-i18n="prot.p4.t1">K9 Certified</span>
+          <span data-i18n="prot.p4.t2">Urban Environments</span>
+          <span data-i18n="prot.p4.t3">Private Security</span>
+          <span data-i18n="prot.p4.t4">CTP Ready</span>
+        </div>
+        <div class="gal-strip">
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/prot4K9civil/2.jpeg","images/prot4K9civil/3.jpeg","images/prot4K9civil/4.jpeg","images/prot4K9civil/5.jpeg","images/prot4K9civil/54.jpeg","images/prot4K9civil/56.jpeg","images/prot4K9civil/67.jpeg","images/prot4K9civil/WhatsApp Image 2026-04-12 at 00.41.55.jpeg"]' data-idx="0"><img src="images/prot4K9civil/2.jpeg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/prot4K9civil/2.jpeg","images/prot4K9civil/3.jpeg","images/prot4K9civil/4.jpeg","images/prot4K9civil/5.jpeg","images/prot4K9civil/54.jpeg","images/prot4K9civil/56.jpeg","images/prot4K9civil/67.jpeg","images/prot4K9civil/WhatsApp Image 2026-04-12 at 00.41.55.jpeg"]' data-idx="1"><img src="images/prot4K9civil/3.jpeg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/prot4K9civil/2.jpeg","images/prot4K9civil/3.jpeg","images/prot4K9civil/4.jpeg","images/prot4K9civil/5.jpeg","images/prot4K9civil/54.jpeg","images/prot4K9civil/56.jpeg","images/prot4K9civil/67.jpeg","images/prot4K9civil/WhatsApp Image 2026-04-12 at 00.41.55.jpeg"]' data-idx="2"><img src="images/prot4K9civil/4.jpeg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/prot4K9civil/2.jpeg","images/prot4K9civil/3.jpeg","images/prot4K9civil/4.jpeg","images/prot4K9civil/5.jpeg","images/prot4K9civil/54.jpeg","images/prot4K9civil/56.jpeg","images/prot4K9civil/67.jpeg","images/prot4K9civil/WhatsApp Image 2026-04-12 at 00.41.55.jpeg"]' data-idx="3"><img src="images/prot4K9civil/5.jpeg" alt=""/></div>
+        </div>
+      </div>
+    </div>
+    <div class="video-block">
+      <p class="v-eyebrow" data-i18n="prot.p4.watch">Watch in Action · Civil K9</p>
+      <a class="v-card" href="https://www.youtube.com/watch?v=pk2792eeGFo" target="_blank" rel="noopener">
+        <div class="v-title">Civil Protection, K9 Program</div>
+        <div class="v-frame">
+          <img src="https://img.youtube.com/vi/pk2792eeGFo/hqdefault.jpg" alt="Civil K9" loading="lazy"/>
+          <div class="v-play"><svg viewBox="0 0 68 48" width="60" height="42"><path d="M66.52 7.74A8.54 8.54 0 0 0 60.7 1.9C55.4 0 34 0 34 0S12.6 0 7.3 1.9A8.54 8.54 0 0 0 1.48 7.74C0 13.07 0 24 0 24s0 10.93 1.48 16.26A8.54 8.54 0 0 0 7.3 46.1C12.6 48 34 48 34 48s21.4 0 26.7-1.9a8.54 8.54 0 0 0 5.82-5.84C68 34.93 68 24 68 24s0-10.93-1.48-16.26z" fill="#ff0000"/><path d="M27 34l18-10-18-10v20z" fill="#fff"/></svg></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 05: BREEDING LICENSES KKL/ZTP -->
+<section class="soft">
+  <div class="wrap">
+    <div class="level-card">
+      <div class="level-media"><img src="images/protection5/3.jpeg" alt="KKL ZTP Breeding License"/></div>
+      <div class="level-body">
+        <span class="level-tag" data-i18n="prot.p5.tag">Protection 05</span>
+        <h2 data-i18n="prot.p5.h2">Breeding Licenses, KKL / ZTP.</h2>
+        <p data-i18n="prot.p5.p">This program includes the preparation of dogs for KKL and ZTP breeding licenses for different working breeds. Training focuses on evaluating temperament, stability, working drives, and protection abilities in accordance with current regulations. The goal is the selection and preparation of high-quality dogs that meet the highest standards of breeding and working dog programs.</p>
+        <div class="tag-row">
+          <span data-i18n="prot.p5.t1">KKL Preparation</span>
+          <span data-i18n="prot.p5.t2">ZTP Examination</span>
+          <span data-i18n="prot.p5.t3">Breed Selection</span>
+          <span data-i18n="prot.p5.t4">Temperament Testing</span>
+          <span data-i18n="prot.p5.t5">Working Drives</span>
+        </div>
+        <div class="gal-strip">
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/protection5/3.jpeg","images/protection5/54.jpeg","images/protection5/WhatsApp Image 2026-04-12 at 00.27.44.jpeg","images/protection5/WhatsApp Image 2026-04-12 at 00.36.3954.jpeg"]' data-idx="0"><img src="images/protection5/3.jpeg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/protection5/3.jpeg","images/protection5/54.jpeg","images/protection5/WhatsApp Image 2026-04-12 at 00.27.44.jpeg","images/protection5/WhatsApp Image 2026-04-12 at 00.36.3954.jpeg"]' data-idx="1"><img src="images/protection5/54.jpeg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/protection5/3.jpeg","images/protection5/54.jpeg","images/protection5/WhatsApp Image 2026-04-12 at 00.27.44.jpeg","images/protection5/WhatsApp Image 2026-04-12 at 00.36.3954.jpeg"]' data-idx="2"><img src="images/protection5/WhatsApp Image 2026-04-12 at 00.27.44.jpeg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/protection5/3.jpeg","images/protection5/54.jpeg","images/protection5/WhatsApp Image 2026-04-12 at 00.27.44.jpeg","images/protection5/WhatsApp Image 2026-04-12 at 00.36.3954.jpeg"]' data-idx="3"><img src="images/protection5/WhatsApp Image 2026-04-12 at 00.36.3954.jpeg" alt=""/></div>
+        </div>
+      </div>
+    </div>
+    <div class="video-block">
+      <p class="v-eyebrow" data-i18n="prot.p5.watch">Watch in Action · KKL / ZTP</p>
+      <a class="v-card" href="https://www.youtube.com/watch?v=2HpWvlHHbfA" target="_blank" rel="noopener">
+        <div class="v-title">Breeding Licenses, KKL / ZTP</div>
+        <div class="v-frame">
+          <img src="https://img.youtube.com/vi/2HpWvlHHbfA/hqdefault.jpg" alt="KKL ZTP" loading="lazy"/>
+          <div class="v-play"><svg viewBox="0 0 68 48" width="60" height="42"><path d="M66.52 7.74A8.54 8.54 0 0 0 60.7 1.9C55.4 0 34 0 34 0S12.6 0 7.3 1.9A8.54 8.54 0 0 0 1.48 7.74C0 13.07 0 24 0 24s0 10.93 1.48 16.26A8.54 8.54 0 0 0 7.3 46.1C12.6 48 34 48 34 48s21.4 0 26.7-1.9a8.54 8.54 0 0 0 5.82-5.84C68 34.93 68 24 68 24s0-10.93-1.48-16.26z" fill="#ff0000"/><path d="M27 34l18-10-18-10v20z" fill="#fff"/></svg></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <img class="cta-bg" src="images/protection1/76.jpeg" alt=""/>
+  <div class="cta-strip-inner">
+    <span class="eyebrow" data-i18n="prot.cta.eyebrow">Protection &amp; K9 Training</span>
+    <h2 data-i18n="prot.cta.h2">Serious protection. Serious control.</h2>
+    <p data-i18n="prot.cta.p">Every dog and every goal is assessed individually. Contact us to discuss the right protection or K9 program for your needs.</p>
+    <a href="contact.html" class="btn btn-primary btn-arrow" data-i18n="prot.cta.btn">Enquire About Training</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="footer-brand">SIM<em>POR</em></a>
+        <p class="footer-about" data-i18n="footer.about">Simpor is a working German Shepherd kennel and protection dog training facility based in Serbia. FCI 3428. Est. 1994.</p>
+        <div class="footer-social" style="margin-top:24px;">
+          <a href="https://www.instagram.com/simpor_dogcentar/" target="_blank" rel="noopener" aria-label="Instagram Dog Center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.instagram.com/simpor_dog_resort/" target="_blank" rel="noopener" aria-label="Instagram Resort"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.facebook.com/simpork9/?locale=sr_RS" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.youtube.com/@simpordogcenter" target="_blank" rel="noopener" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96C1 8.13 1 12 1 12s0 3.87.46 5.58a2.78 2.78 0 0 0 1.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.97C23 15.87 23 12 23 12s0-3.87-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h5 data-i18n="footer.h.programs">Training</h5><ul>
+        <li><a href="obedience.html" data-i18n="footer.obedience">Obedience</a></li>
+        <li><a href="protection-k9.html" data-i18n="footer.protection">Protection &amp; K9</a></li>
+        <li><a href="show-sport.html" data-i18n="footer.showsport">Show &amp; Sport</a></li>
+        <li><a href="bh-igp.html" data-i18n="footer.bhigp">BH / IGP Foundation</a></li>
+        <li><a href="kkl-ztp.html" data-i18n="footer.kklztp">KKL &amp; ZTP</a></li>
+        <li><a href="k9-programs.html" data-i18n="footer.k9">K9 Programs</a></li>
+      </ul></div>
+      <div class="footer-col"><h5 data-i18n="footer.h.company">Company</h5><ul>
+        <li><a href="about.html" data-i18n="footer.about.link">About Simpor</a></li>
+        <li><a href="how-it-works.html" data-i18n="footer.how">How It Works</a></li>
+        <li><a href="testimonials.html" data-i18n="footer.testimonials">Testimonials</a></li>
+        <li><a href="faq.html" data-i18n="footer.faq">FAQ</a></li>
+      </ul></div>
+      <div class="footer-col"><h5 data-i18n="footer.h.contact">Contact</h5><ul>
+        <li><a href="tel:+381644919030">+381 64 4919030</a></li>
+        <li><a href="mailto:Simpordogcentar1@gmail.com">Simpordogcentar1@gmail.com</a></li>
+        <li data-i18n="footer.location">Serbia · Europe</li>
+        <li><a href="contact.html" data-i18n="footer.book">Book a Call</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div data-i18n="footer.copy">© 2026 Simpor Dog Center. All rights reserved.</div>
+      <div data-i18n="footer.reg">FCI 3428 · Est. 1994</div>
+    </div>
+  </div>
+</footer>
+
+<div id="lb">
+  <button class="lb-close" onclick="closeLb()">×</button>
+  <button class="lb-prev" onclick="lbNav(-1)">&#8592;</button>
+  <img id="lbImg" src="" alt=""/>
+  <button class="lb-next" onclick="lbNav(1)">&#8594;</button>
+</div>
+<script>
+var lbImgs=[],lbIdx=0;
+function openLb(el){lbImgs=JSON.parse(el.dataset.imgs);lbIdx=parseInt(el.dataset.idx);document.getElementById('lbImg').src=lbImgs[lbIdx];document.getElementById('lb').classList.add('open');document.body.style.overflow='hidden';}
+function closeLb(){document.getElementById('lb').classList.remove('open');document.body.style.overflow='';}
+function lbNav(d){lbIdx=(lbIdx+d+lbImgs.length)%lbImgs.length;document.getElementById('lbImg').src=lbImgs[lbIdx];}
+document.getElementById('lb').addEventListener('click',function(e){if(e.target===this)closeLb();});
+document.addEventListener('keydown',function(e){if(!document.getElementById('lb').classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')lbNav(-1);if(e.key==='ArrowRight')lbNav(1);});
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

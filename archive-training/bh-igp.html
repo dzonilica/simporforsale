@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title data-i18n="bh.title">BH / IGP Foundation, Simpor Dog Center</title>
+<meta name="description" content="Simpor BH / IGP Foundation: BH Companion Dog Test, IGP working dog foundation, and the three IGP phases, tracking, obedience, and protection."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<script src="js/lang.js" defer></script>
+<style>
+.tag-row{ display:flex; flex-wrap:wrap; gap:8px; margin-top:24px; }
+.tag-row span{ padding:6px 14px; border:1px solid var(--line-dark); border-radius:999px; font-size:12px; letter-spacing:.08em; color:var(--ink-dim); }
+section.light .tag-row span{ border-color:var(--line-light); color:var(--ink-dark-2); }
+.video-block{ margin:48px auto 0; max-width:820px; }
+.video-block .v-eyebrow{ font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); text-align:center; margin-bottom:18px; }
+.video-block .v-card{ display:block; border-radius:var(--radius-lg); overflow:hidden; background:#000; border:1px solid var(--line-dark); }
+.video-block .v-title{ padding:14px 18px; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--ink-dim); border-bottom:1px solid var(--line-dark); background:var(--bg-2); }
+.video-block .v-frame{ position:relative; padding-bottom:56.25%; overflow:hidden; }
+.video-block .v-frame img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .6s var(--ease); }
+.video-block .v-card:hover .v-frame img{ transform:scale(1.04); }
+.video-block .v-play{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); opacity:.9; pointer-events:none; filter:drop-shadow(0 2px 12px rgba(0,0,0,.6)); }
+.video-grid-2{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+@media (max-width: 900px){ .video-grid-2{ grid-template-columns:1fr; } }
+/* Phase cards */
+.phase-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; margin-top:40px; }
+.phase-card{ background:var(--bg-2); border:1px solid var(--line-dark); border-radius:var(--radius-lg); padding:44px 32px; text-align:left; transition:border-color .4s var(--ease), transform .4s var(--ease); }
+.phase-card:hover{ border-color:var(--gold); transform:translateY(-4px); }
+.phase-letter{ font-family:var(--font-serif); font-size:72px; font-weight:300; color:var(--gold); line-height:1; margin-bottom:20px; }
+.phase-name{ font-family:var(--font-serif); font-size:24px; color:var(--ink); margin:0 0 14px; }
+.phase-desc{ font-size:15px; color:var(--ink-dim); line-height:1.7; margin:0; }
+section.light .phase-card{ background:#fff; border-color:var(--line-light); }
+section.light .phase-name{ color:var(--ink-dark); }
+section.light .phase-desc{ color:var(--ink-dark-2); }
+@media (max-width: 900px){ .phase-grid{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<div id="loader"><div class="loader-mark">SIM<em>POR</em></div></div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-brand">SIM<em>POR</em></a>
+  <ul class="nav-links">
+    <li><a href="obedience.html" class="has-caret" data-i18n="nav.training">Training Services</a>
+      <ul class="submenu">
+        <li><a href="obedience.html" data-i18n="nav.training.obedience">Obedience (All Breeds)</a></li>
+        <li><a href="protection-k9.html" data-i18n="nav.training.protection">Protection &amp; K9 Work</a></li>
+        <li><a href="show-sport.html" data-i18n="nav.training.showsport">Show &amp; Sport</a></li>
+        <li><a href="bh-igp.html" data-i18n="nav.training.bhigp">BH / IGP Foundation</a></li>
+        <li><a href="kkl-ztp.html" data-i18n="nav.training.kklztp">KKL &amp; ZTP Licenses</a></li>
+        <li><a href="k9-programs.html" data-i18n="nav.training.k9">K9 Programs</a></li>
+      </ul>
+    </li>
+    <li><a href="available-dogs.html" data-i18n="nav.available">Available Dogs</a></li>
+    <li><a href="about.html" data-i18n="nav.about">About</a></li>
+    <li><a href="how-it-works.html" data-i18n="nav.process">Process</a></li>
+    <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:+381644919030" class="nav-login">+381 64 4919030</a>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+      <span class="lang-sep">/</span>
+      <button class="lang-btn" data-lang="sr" onclick="setLang('sr')">SR</button>
+    </div>
+    <a href="contact.html" class="nav-cta" data-i18n="nav.book">Book a Call</a>
+    <button class="hamburger" id="hamburger" data-i18n-aria="nav.hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" data-i18n="mobile.home">Home</a>
+  <div class="mobile-submenu">
+    <button class="mobile-submenu-toggle" data-i18n="mobile.training">Training Services</button>
+    <div class="mobile-submenu-items">
+      <a href="obedience.html" data-i18n="nav.training.obedience">Obedience (All Breeds)</a>
+      <a href="protection-k9.html" data-i18n="nav.training.protection">Protection &amp; K9 Work</a>
+      <a href="show-sport.html" data-i18n="nav.training.showsport">Show &amp; Sport</a>
+      <a href="bh-igp.html" data-i18n="nav.training.bhigp">BH / IGP Foundation</a>
+      <a href="kkl-ztp.html" data-i18n="nav.training.kklztp">KKL &amp; ZTP Licenses</a>
+      <a href="k9-programs.html" data-i18n="nav.training.k9">K9 Programs</a>
+    </div>
+  </div>
+  <a href="available-dogs.html" data-i18n="mobile.available">Available Dogs</a>
+  <a href="about.html" data-i18n="mobile.about">About</a>
+  <a href="how-it-works.html" data-i18n="mobile.process">Process</a>
+  <a href="testimonials.html" data-i18n="mobile.testimonials">Testimonials</a>
+  <a href="faq.html" data-i18n="mobile.faq">FAQ</a>
+  <a href="contact.html" data-i18n="mobile.contact">Contact</a>
+  <div class="lang-switcher">
+    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    <span class="lang-sep">/</span>
+    <button class="lang-btn" data-lang="sr" onclick="setLang('sr')">SR</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="bh.hero.eyebrow">Category 04 · BH / IGP Foundation</span>
+    <h1 data-i18n="bh.hero.h1">The complete working dog -<br/>in <span class="serif-em">three phases.</span></h1>
+    <p class="lead" data-i18n="bh.hero.lead">The BH confirms your dog's readiness for life and work. IGP builds the complete working dog, from tracking and obedience to protection.</p>
+    <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;">
+      <a href="contact.html" class="btn btn-primary btn-arrow" data-i18n="bh.hero.cta1">Enquire About Training</a>
+      <a href="kkl-ztp.html" class="btn btn-outline" data-i18n="bh.hero.cta2">KKL / ZTP Licenses →</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding:0;">
+  <img src="../kucici/s3.jpg" alt="BH IGP training" style="width:100%;height:60vh;object-fit:cover;"/>
+</section>
+
+<!-- BH + IGP OVERVIEW -->
+<section>
+  <div class="wrap">
+    <div class="section-split">
+      <div>
+        <span class="eyebrow" data-i18n="bh.bh.eyebrow">BH, Companion Dog Test</span>
+        <h2 data-i18n="bh.bh.h2">BH, Companion Dog Test.</h2>
+        <p data-i18n="bh.bh.p">The BH program is the basic obedience and socialization test for dogs intended to live and work in urban and everyday environments. This program confirms the dog's stable temperament, control, obedience, and proper behavior in the presence of people, other dogs, and traffic. The BH examination is a prerequisite for all further working and sport titles, as well as the foundation for advanced training in sport, protection, and K9 programs.</p>
+        <div class="tag-row">
+          <span data-i18n="bh.bh.t1">Urban Environments</span>
+          <span data-i18n="bh.bh.t2">Socialization</span>
+          <span data-i18n="bh.bh.t3">Prerequisite for IGP</span>
+          <span data-i18n="bh.bh.t4">Temperament Confirmation</span>
+        </div>
+      </div>
+      <div class="split-media"><img src="images/Sport/25.jpg" alt="BH Companion Dog Test"/></div>
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="wrap">
+    <div class="section-split reverse">
+      <div>
+        <span class="eyebrow" data-i18n="bh.igp.eyebrow">IGP, Working Dog Foundation</span>
+        <h2 data-i18n="bh.igp.h2">IGP, Working Dog Foundation.</h2>
+        <p data-i18n="bh.igp.p">The IGP program represents the foundation of professional work with working dogs and the basis for further sport development. Training includes a high level of obedience, precision in command execution, and stability under demanding working conditions. Depending on the dog's ability, genetics, and the precision of both dog and handler, the IGP program can be directed toward sport competition with the goal of achieving top results, or it can serve as the basis for further professional and working dog training.</p>
+        <div class="tag-row">
+          <span data-i18n="bh.igp.t1">Sport or Professional</span>
+          <span data-i18n="bh.igp.t2">All 3 Phases</span>
+          <span data-i18n="bh.igp.t3">Genetics-Based</span>
+          <span data-i18n="bh.igp.t4">Handler Precision</span>
+        </div>
+      </div>
+      <div class="split-media"><img src="images/Sport/40.jpeg" alt="IGP Working Dog Foundation"/></div>
+    </div>
+  </div>
+</section>
+
+<!-- THREE PHASES -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="bh.disc.eyebrow">IGP Disciplines</span>
+      <h2 data-i18n="bh.disc.h2">Three Phases. <span class="serif-em">One Champion.</span></h2>
+      <p data-i18n="bh.disc.p">Each IGP dog is tested in tracking, obedience, and protection, three disciplines that together define the complete working dog.</p>
+    </div>
+    <div class="phase-grid">
+      <div class="phase-card">
+        <div class="phase-letter">A</div>
+        <div class="phase-name" data-i18n="bh.a.name">Tracking</div>
+        <p class="phase-desc" data-i18n="bh.a.desc">The tracking discipline evaluates the dog's ability to use its nose to find and follow a human track. During the exercise, the dog must demonstrate concentration, precision, and calmness, while correctly indicating found articles. Tracking develops the dog's mental stability, focus, and independence, and forms the basis for many working and service purposes.</p>
+      </div>
+      <div class="phase-card">
+        <div class="phase-letter">B</div>
+        <div class="phase-name" data-i18n="bh.b.name">Obedience</div>
+        <p class="phase-desc" data-i18n="bh.b.desc">The obedience discipline includes the precise execution of exercises under the handler's control, including heeling, changes of pace, recalls, stays, and other tasks defined by the regulations. The emphasis is placed on accuracy, concentration, and harmony between dog and handler, with the goal of achieving maximum points and reliable performance under sport conditions.</p>
+      </div>
+      <div class="phase-card">
+        <div class="phase-letter">C</div>
+        <div class="phase-name" data-i18n="bh.c.name">Protection</div>
+        <p class="phase-desc" data-i18n="bh.c.desc">The protection discipline evaluates the dog's courage, determination, and control in attack and defense situations. The dog must demonstrate strong working drives, correct technique, and a high level of control and obedience. This discipline requires a stable temperament and precise cooperation with the handler, while strictly respecting safety rules and sport standards.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRACKING VIDEO -->
+<section class="soft">
+  <div class="wrap">
+    <div class="video-block" style="margin-top:0;">
+      <p class="v-eyebrow" data-i18n="bh.track.watch">Tracking, Phase A, In Action</p>
+      <a class="v-card" href="https://www.youtube.com/watch?v=HIqP2yuzJDU" target="_blank" rel="noopener">
+        <div class="v-title">Tracking</div>
+        <div class="v-frame">
+          <img src="https://img.youtube.com/vi/HIqP2yuzJDU/hqdefault.jpg" alt="Tracking IGP Phase A" loading="lazy"/>
+          <div class="v-play"><svg viewBox="0 0 68 48" width="60" height="42"><path d="M66.52 7.74A8.54 8.54 0 0 0 60.7 1.9C55.4 0 34 0 34 0S12.6 0 7.3 1.9A8.54 8.54 0 0 0 1.48 7.74C0 13.07 0 24 0 24s0 10.93 1.48 16.26A8.54 8.54 0 0 0 7.3 46.1C12.6 48 34 48 34 48s21.4 0 26.7-1.9a8.54 8.54 0 0 0 5.82-5.84C68 34.93 68 24 68 24s0-10.93-1.48-16.26z" fill="#ff0000"/><path d="M27 34l18-10-18-10v20z" fill="#fff"/></svg></div>
+        </div>
+      </a>
+    </div>
+
+    <div class="video-block">
+      <p class="v-eyebrow" data-i18n="bh.sport.watch">BH / IGP Sport, In Action</p>
+      <div class="video-grid-2">
+        <a class="v-card" href="https://www.youtube.com/watch?v=41zecLzZvDc" target="_blank" rel="noopener">
+          <div class="v-title">BH / IGP 1</div>
+          <div class="v-frame">
+            <img src="https://img.youtube.com/vi/41zecLzZvDc/hqdefault.jpg" alt="BH IGP 1" loading="lazy"/>
+            <div class="v-play"><svg viewBox="0 0 68 48" width="60" height="42"><path d="M66.52 7.74A8.54 8.54 0 0 0 60.7 1.9C55.4 0 34 0 34 0S12.6 0 7.3 1.9A8.54 8.54 0 0 0 1.48 7.74C0 13.07 0 24 0 24s0 10.93 1.48 16.26A8.54 8.54 0 0 0 7.3 46.1C12.6 48 34 48 34 48s21.4 0 26.7-1.9a8.54 8.54 0 0 0 5.82-5.84C68 34.93 68 24 68 24s0-10.93-1.48-16.26z" fill="#ff0000"/><path d="M27 34l18-10-18-10v20z" fill="#fff"/></svg></div>
+          </div>
+        </a>
+        <a class="v-card" href="https://www.youtube.com/watch?v=mybNDimilqY" target="_blank" rel="noopener">
+          <div class="v-title">IGP 3</div>
+          <div class="v-frame">
+            <img src="https://img.youtube.com/vi/mybNDimilqY/hqdefault.jpg" alt="IGP 3" loading="lazy"/>
+            <div class="v-play"><svg viewBox="0 0 68 48" width="60" height="42"><path d="M66.52 7.74A8.54 8.54 0 0 0 60.7 1.9C55.4 0 34 0 34 0S12.6 0 7.3 1.9A8.54 8.54 0 0 0 1.48 7.74C0 13.07 0 24 0 24s0 10.93 1.48 16.26A8.54 8.54 0 0 0 7.3 46.1C12.6 48 34 48 34 48s21.4 0 26.7-1.9a8.54 8.54 0 0 0 5.82-5.84C68 34.93 68 24 68 24s0-10.93-1.48-16.26z" fill="#ff0000"/><path d="M27 34l18-10-18-10v20z" fill="#fff"/></svg></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <img class="cta-bg" src="../kucici/g3.jpeg" alt=""/>
+  <div class="cta-strip-inner">
+    <span class="eyebrow" data-i18n="bh.cta.eyebrow">BH / IGP Foundation</span>
+    <h2 data-i18n="bh.cta.h2">Build the complete working dog.</h2>
+    <p data-i18n="bh.cta.p">From BH readiness to full IGP 3 titles, contact us to discuss where your dog is now and where you'd like to take him.</p>
+    <a href="contact.html" class="btn btn-primary btn-arrow" data-i18n="bh.cta.btn">Enquire About Training</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="footer-brand">SIM<em>POR</em></a>
+        <p class="footer-about" data-i18n="footer.about">Simpor is a working German Shepherd kennel and protection dog training facility based in Serbia. FCI 3428. Est. 1994.</p>
+        <div class="footer-social" style="margin-top:24px;">
+          <a href="https://www.instagram.com/simpor_dogcentar/" target="_blank" rel="noopener" aria-label="Instagram Dog Center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.instagram.com/simpor_dog_resort/" target="_blank" rel="noopener" aria-label="Instagram Resort"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.facebook.com/simpork9/?locale=sr_RS" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.youtube.com/@simpordogcenter" target="_blank" rel="noopener" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96C1 8.13 1 12 1 12s0 3.87.46 5.58a2.78 2.78 0 0 0 1.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.97C23 15.87 23 12 23 12s0-3.87-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h5 data-i18n="footer.h.programs">Training</h5><ul>
+        <li><a href="obedience.html" data-i18n="footer.obedience">Obedience</a></li>
+        <li><a href="protection-k9.html" data-i18n="footer.protection">Protection &amp; K9</a></li>
+        <li><a href="show-sport.html" data-i18n="footer.showsport">Show &amp; Sport</a></li>
+        <li><a href="bh-igp.html" data-i18n="footer.bhigp">BH / IGP Foundation</a></li>
+        <li><a href="kkl-ztp.html" data-i18n="footer.kklztp">KKL &amp; ZTP</a></li>
+        <li><a href="k9-programs.html" data-i18n="footer.k9">K9 Programs</a></li>
+      </ul></div>
+      <div class="footer-col"><h5 data-i18n="footer.h.company">Company</h5><ul>
+        <li><a href="about.html" data-i18n="footer.about.link">About Simpor</a></li>
+        <li><a href="how-it-works.html" data-i18n="footer.how">How It Works</a></li>
+        <li><a href="testimonials.html" data-i18n="footer.testimonials">Testimonials</a></li>
+        <li><a href="faq.html" data-i18n="footer.faq">FAQ</a></li>
+      </ul></div>
+      <div class="footer-col"><h5 data-i18n="footer.h.contact">Contact</h5><ul>
+        <li><a href="tel:+381644919030">+381 64 4919030</a></li>
+        <li><a href="mailto:Simpordogcentar1@gmail.com">Simpordogcentar1@gmail.com</a></li>
+        <li data-i18n="footer.location">Serbia · Europe</li>
+        <li><a href="contact.html" data-i18n="footer.book">Book a Call</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div data-i18n="footer.copy">© 2026 Simpor Dog Center. All rights reserved.</div>
+      <div data-i18n="footer.reg">FCI 3428 · Est. 1994</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

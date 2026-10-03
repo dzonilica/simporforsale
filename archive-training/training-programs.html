@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title data-i18n="training.title">Training Services, Simpor · Obedience, Protection & IGP</title>
+<meta name="description" content="Six complete training categories at Simpor Dog Center, from first obedience to World Championship IGP, K9 police & military service, and KKL/ZTP breeding licenses."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<script src="js/lang.js" defer></script>
+</head>
+<body>
+
+<div id="loader"><div class="loader-mark">SIM<em>POR</em></div></div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-brand">SIM<em>POR</em></a>
+  <ul class="nav-links">
+    <li><a href="training-programs.html" class="has-caret" data-i18n="nav.training">Training Services</a>
+      <ul class="submenu">
+        <li><a href="training-programs.html" data-i18n="nav.training.overview">Overview</a></li>
+        <li><a href="family-protection.html" data-i18n="nav.training.obedience">Obedience (All Breeds)</a></li>
+        <li><a href="executive-protection.html" data-i18n="nav.training.protection">Protection &amp; K9 Work</a></li>
+        <li><a href="german-shepherds.html" data-i18n="nav.training.k9">K9 Programs</a></li>
+      </ul>
+    </li>
+    <li><a href="available-dogs.html" data-i18n="nav.available">Available Dogs</a></li>
+    <li><a href="about.html" class="has-caret" data-i18n="nav.about">About</a>
+      <ul class="submenu">
+        <li><a href="about.html" data-i18n="nav.about.why">Why Simpor</a></li>
+        <li><a href="about.html#approach" data-i18n="nav.about.approach">Our Approach</a></li>
+        <li><a href="testimonials.html" data-i18n="nav.about.testimonials">Testimonials</a></li>
+      </ul>
+    </li>
+    <li><a href="how-it-works.html" data-i18n="nav.process">Process</a></li>
+    <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:+381644919030" class="nav-login">+381 64 4919030</a>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+      <span class="lang-sep">/</span>
+      <button class="lang-btn" data-lang="sr" onclick="setLang('sr')">SR</button>
+    </div>
+    <a href="contact.html" class="nav-cta" data-i18n="nav.book">Book a Call</a>
+    <button class="hamburger" id="hamburger" data-i18n-aria="nav.hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" data-i18n="mobile.home">Home</a>
+  <div class="mobile-submenu">
+    <button class="mobile-submenu-toggle" data-i18n="mobile.training">Training Services</button>
+    <div class="mobile-submenu-items">
+      <a href="obedience.html" data-i18n="nav.training.obedience">Obedience (All Breeds)</a>
+      <a href="protection-k9.html" data-i18n="nav.training.protection">Protection &amp; K9 Work</a>
+      <a href="show-sport.html" data-i18n="nav.training.showsport">Show &amp; Sport</a>
+      <a href="bh-igp.html" data-i18n="nav.training.bhigp">BH / IGP Foundation</a>
+      <a href="kkl-ztp.html" data-i18n="nav.training.kklztp">KKL &amp; ZTP Licenses</a>
+      <a href="k9-programs.html" data-i18n="nav.training.k9">K9 Programs</a>
+    </div>
+  </div>
+  <a href="available-dogs.html" data-i18n="mobile.available">Available Dogs</a>
+  <a href="about.html" data-i18n="mobile.about">About</a>
+  <a href="how-it-works.html" data-i18n="mobile.process">Process</a>
+  <a href="testimonials.html" data-i18n="mobile.testimonials">Testimonials</a>
+  <a href="faq.html" data-i18n="mobile.faq">FAQ</a>
+  <a href="contact.html" data-i18n="mobile.contact">Contact</a>
+  <div class="lang-switcher">
+    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    <span class="lang-sep">/</span>
+    <button class="lang-btn" data-lang="sr" onclick="setLang('sr')">SR</button>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="training.hero.eyebrow">Training Services</span>
+    <h1 data-i18n="training.hero.h1">Six categories. One standard.</h1>
+    <p class="lead" data-i18n="training.hero.lead">From first obedience to World Championship IGP, from personal protection to police and military K9, six complete training categories built on three decades of professional working dog experience.</p>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="training.appr.eyebrow">Our Approach</span>
+      <h2 data-i18n="training.appr.h2">Precision. Drive. Results.</h2>
+      <p data-i18n="training.appr.p1">At Simpor Dog Center, every training program is built on decades of real-world experience in sport, protection, and K9 work. We do not follow trends, we set standards.</p>
+      <p data-i18n="training.appr.p2">Each dog is assessed individually before beginning training. Programs are structured around the dog's natural drives, temperament, and the specific goals of the owner or handler. Whether you aim for World Championship competition or simply a reliable, well-behaved companion, the methodology is always the same: correct, consistent, and effective.</p>
+      <p data-i18n="training.appr.p3">All training is conducted by certified professionals under the direct supervision of founder Dejan Simović, ensuring the highest possible standard in every session.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY OVERVIEW GRID -->
+<section class="soft">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="training.cat.eyebrow">Six Complete Categories</span>
+      <h2 data-i18n="training.cat.h2">Every stage of a working dog's development.</h2>
+    </div>
+    <div class="card-grid">
+      <a href="family-protection.html" class="card">
+        <span class="card-tag" data-i18n="training.cat.01">01 · All Breeds</span>
+        <img src="images/protection5/3.jpeg" alt="Obedience"/>
+        <div class="card-body">
+          <h3 data-i18n="training.cat.c1.h3">Obedience (All Breeds)</h3>
+          <p data-i18n="training.cat.c1.p">From basic foundations for family dogs to elite IGP competition preparation, obedience programs for every stage of development.</p>
+        </div>
+      </a>
+      <a href="executive-protection.html" class="card">
+        <span class="card-tag" data-i18n="training.cat.02">02 · Working Dogs</span>
+        <img src="images/protection1/76.jpeg" alt="Protection & K9 Work"/>
+        <div class="card-body">
+          <h3 data-i18n="training.cat.c2.h3">Protection &amp; K9 Work</h3>
+          <p data-i18n="training.cat.c2.p">From personal protection and sport-level bite-work to civil K9 programs and breeding licenses, for serious working dog goals.</p>
+        </div>
+      </a>
+      <a href="#show-sport" class="card">
+        <span class="card-tag" data-i18n="training.cat.03">03 · Show &amp; Sport</span>
+        <img src="images/protection2/66.jpeg" alt="Show & Sport"/>
+        <div class="card-body">
+          <h3 data-i18n="training.cat.c3.h3">Show &amp; Sport</h3>
+          <p data-i18n="training.cat.c3.p">From the show ring to the sport field, presenting your dog's anatomy and working ability at its absolute best.</p>
+        </div>
+      </a>
+      <a href="#bh-igp" class="card">
+        <span class="card-tag" data-i18n="training.cat.04">04 · Foundation</span>
+        <img src="images/protection3/23.jpeg" alt="BH / IGP"/>
+        <div class="card-body">
+          <h3 data-i18n="training.cat.c4.h3">BH / IGP Foundation</h3>
+          <p data-i18n="training.cat.c4.p">The BH confirms your dog's readiness for life and work. IGP builds the complete working dog, tracking, obedience, protection.</p>
+        </div>
+      </a>
+      <a href="#kkl-ztp" class="card">
+        <span class="card-tag" data-i18n="training.cat.05">05 · Licenses</span>
+        <img src="images/dogs2.jpg" alt="KKL / ZTP"/>
+        <div class="card-body">
+          <h3 data-i18n="training.cat.c5.h3">KKL &amp; ZTP Breeding Licenses</h3>
+          <p data-i18n="training.cat.c5.p">Breeding licenses that guarantee the quality and future of the breed, prepared to the highest international standard.</p>
+        </div>
+      </a>
+      <a href="german-shepherds.html" class="card">
+        <span class="card-tag" data-i18n="training.cat.06">06 · Professional</span>
+        <img src="images/protection1/467.jpeg" alt="K9 Programs"/>
+        <div class="card-body">
+          <h3 data-i18n="training.cat.c6.h3">K9 Programs</h3>
+          <p data-i18n="training.cat.c6.p">From search and detection to police and military service, complete K9 programs built on 30 years of professional experience.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY 01: OBEDIENCE -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="training.ob.eyebrow">Category 01 · Obedience</span>
+      <h2 data-i18n="training.ob.h2">Obedience, for every breed, at every level.</h2>
+      <p data-i18n="training.ob.p">From basic foundations for family dogs to elite IGP competition preparation, our obedience programs cover every stage of development with precision and care.</p>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">01</div>
+        <h4 data-i18n="training.ob.f1.h4">Basic Obedience</h4>
+        <p data-i18n="training.ob.f1.p">Focus on basic commands, proper leash walking, socialization, and reducing unwanted behavior. Creates the foundation for further work and allows owners to communicate with their dog with confidence in everyday life.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">02</div>
+        <h4 data-i18n="training.ob.f2.h4">Advanced, Tricks &amp; Improvements</h4>
+        <p data-i18n="training.ob.f2.p">For dogs that have completed the basic and intermediate stages. Develops control, creative exercises, tricks, and advanced commands that improve concentration, flexibility, and working motivation.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">03</div>
+        <h4 data-i18n="training.ob.f3.h4">BH / IGP Obedience</h4>
+        <p data-i18n="training.ob.f3.p">Prepared according to current international IGP regulations. Sport-level obedience, precision, stability under pressure, and reliable performance, with emphasis on correct technique and examination preparation.</p>
+      </div>
+    </div>
+    <div style="margin-top:32px;">
+      <a href="family-protection.html" class="btn btn-outline btn-arrow" data-i18n="training.ob.btn">Obedience Program Details</a>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY 02: PROTECTION & K9 WORK -->
+<section class="soft">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="training.pr.eyebrow">Category 02 · Protection &amp; K9</span>
+      <h2 data-i18n="training.pr.h2">Protection &amp; K9 Work.</h2>
+      <p data-i18n="training.pr.p">From personal protection and sport-level bite-work to police K9 preparation and breeding licenses, professional programs for serious working dog goals.</p>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">01</div>
+        <h4 data-i18n="training.pr.f1.h4">Personal Protection</h4>
+        <p data-i18n="training.pr.f1.p">Dogs trained to protect their owner and family in real-life situations. Based on control, stability, and proper situational evaluation, a dog that remains calm in everyday surroundings, yet responds decisively when necessary.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">02</div>
+        <h4 data-i18n="training.pr.f2.h4">Property &amp; Facility Protection</h4>
+        <p data-i18n="training.pr.f2.p">Controlled territorial guarding for property, buildings, and facilities. Proper reaction to unauthorized entry and reliable work in different conditions, including night work and coverage of larger areas.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">03</div>
+        <h4 data-i18n="training.pr.f3.h4">Sport Protection, IGP 1–3</h4>
+        <p data-i18n="training.pr.f3.p">Training in accordance with the rules of IGP 1–3. Develops working drives, bite-work technique, control, speed, and precision, the foundation of working dog sport.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">04</div>
+        <h4 data-i18n="training.pr.f4.h4">Civil Protection, K9 Program</h4>
+        <p data-i18n="training.pr.f4.p">Professional protection and official duties in real-life conditions. Combines obedience, protection work, and stability in urban environments, adapted to private security and professional K9 systems.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">05</div>
+        <h4 data-i18n="training.pr.f5.h4">Breeding Licenses, KKL / ZTP</h4>
+        <p data-i18n="training.pr.f5.p">Preparation for KKL and ZTP breeding licenses. Evaluation of temperament, stability, working drives, and protection abilities according to current regulations for selection of high-quality breeding dogs.</p>
+      </div>
+    </div>
+    <div style="margin-top:32px;">
+      <a href="executive-protection.html" class="btn btn-outline btn-arrow" data-i18n="training.pr.btn">Protection Program Details</a>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY 03: SHOW & SPORT -->
+<section id="show-sport">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="training.ss.eyebrow">Category 03 · Show &amp; Sport</span>
+      <h2 data-i18n="training.ss.h2">Show &amp; Sport.</h2>
+      <p data-i18n="training.ss.p">From the show ring to the sport field, presenting your dog's anatomy and working ability at its absolute best.</p>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">01</div>
+        <h4 data-i18n="training.ss.f1.h4">Show Preparation &amp; Handling</h4>
+        <p data-i18n="training.ss.f1.p">For dogs of all breeds, correct presentation of anatomy, movement, and character according to current breed standards. Professionally guided conditioning, movement, posture, confidence, and handler-dog connection in the show ring.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">02</div>
+        <h4 data-i18n="training.ss.f2.h4">Sport Competitions, IGP 1–3</h4>
+        <p data-i18n="training.ss.f2.p">Working-line dogs preparing for IGP 1–3 competitions. Maximum precision in every exercise, high control and stability under demanding conditions, designed to achieve the highest scores at national and international competitions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY 04: BH / IGP FOUNDATION -->
+<section id="bh-igp" class="soft">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="training.bh.eyebrow">Category 04 · BH / IGP Foundation</span>
+      <h2 data-i18n="training.bh.h2">The complete working dog, in three phases.</h2>
+      <p data-i18n="training.bh.p">The BH confirms your dog's readiness for life and work. IGP builds the complete working dog, from tracking and obedience to protection.</p>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">BH</div>
+        <h4 data-i18n="training.bh.f1.h4">BH, Companion Dog Test</h4>
+        <p data-i18n="training.bh.f1.p">Basic obedience and socialization test for dogs living and working in urban environments. Confirms stable temperament, control, obedience, and proper behavior around people, other dogs, and traffic. Prerequisite for all further working and sport titles.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">IGP</div>
+        <h4 data-i18n="training.bh.f2.h4">IGP, Working Dog Foundation</h4>
+        <p data-i18n="training.bh.f2.p">The foundation of professional work with working dogs and the basis for further sport development. High-level obedience, command precision, and stability under demanding conditions, directed toward sport competition or professional work.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">A</div>
+        <h4 data-i18n="training.bh.f3.h4">Phase A, Tracking</h4>
+        <p data-i18n="training.bh.f3.p">The dog uses its nose to find and follow a human track, demonstrating concentration, precision, and calmness while correctly indicating found articles. Develops mental stability, focus, and independence.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">B</div>
+        <h4 data-i18n="training.bh.f4.h4">Phase B, Obedience</h4>
+        <p data-i18n="training.bh.f4.p">Precise execution of exercises under the handler's control, heeling, changes of pace, recalls, stays. Accuracy, concentration, and harmony between dog and handler, targeting maximum points under sport conditions.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">C</div>
+        <h4 data-i18n="training.bh.f5.h4">Phase C, Protection</h4>
+        <p data-i18n="training.bh.f5.p">Evaluates the dog's courage, determination, and control in attack and defense situations. Strong working drives, correct technique, high-level control and obedience, with strict respect for safety and sport standards.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY 05: KKL & ZTP -->
+<section id="kkl-ztp">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="training.kkl.eyebrow">Category 05 · Breeding Licenses</span>
+      <h2 data-i18n="training.kkl.h2">KKL &amp; ZTP Breeding Licenses.</h2>
+      <p data-i18n="training.kkl.p">Breeding licenses that guarantee the quality and future of the breed, prepared to the highest international standard.</p>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">KKL</div>
+        <h4 data-i18n="training.kkl.f1.h4">KKL (Körung), German Shepherd Breeding License</h4>
+        <p data-i18n="training.kkl.f1.p">The official breeding license for German Shepherd Dogs, conducted according to the rules of the Verein für Deutsche Schäferhunde (SV). Evaluation of genetic potential, temperament stability, anatomy, and working abilities. Only dogs meeting the highest criteria receive a breeding license.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">ZTP</div>
+        <h4 data-i18n="training.kkl.f2.h4">ZTP, Breeding Suitability Test for Working Breeds</h4>
+        <p data-i18n="training.kkl.f2.p">Breeding suitability test for Rottweilers, Dobermans, and other working breeds according to the regulations of their respective breed organizations. Evaluates temperament, stability, working drives, obedience, and reaction under protection and stress, the standard for responsible, professional breeding.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY 06: K9 PROGRAMS -->
+<section class="soft">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="training.k9.eyebrow">Category 06 · K9 Programs</span>
+      <h2 data-i18n="training.k9.h2">Professional K9 Programs.</h2>
+      <p data-i18n="training.k9.p">From search and detection to police and military service, complete K9 programs built on 30 years of professional working dog experience.</p>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">01</div>
+        <h4 data-i18n="training.k9.f1.h4">K9 Searching</h4>
+        <p data-i18n="training.k9.f1.p">Search and detection work in different environments. Scent work, concentration, and precision in locating the target, reliable performance in both controlled and real-life conditions.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">02</div>
+        <h4 data-i18n="training.k9.f2.h4">K9 Civil</h4>
+        <p data-i18n="training.k9.f2.p">Adapted for dogs working in everyday and urban environments. Stability, obedience, and proper reaction when exposed to people, traffic, and various external factors.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">03</div>
+        <h4 data-i18n="training.k9.f3.h4">K9 Protection</h4>
+        <p data-i18n="training.k9.f3.p">Controlled protection work with a clear emphasis on obedience, stability, and safe, reliable responses in real-life situations. Designed for both professional use and high-stakes personal protection.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">04</div>
+        <h4 data-i18n="training.k9.f4.h4">K9 Police Service</h4>
+        <p data-i18n="training.k9.f4.p">Training for police service dogs, obedience, protection work, and specialized tasks according to official requirements. Adapted for professional use and high working standards in law enforcement environments.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">05</div>
+        <h4 data-i18n="training.k9.f5.h4">K9 Military Service</h4>
+        <p data-i18n="training.k9.f5.p">Dogs prepared for work in demanding and high-risk environments. High level of discipline, stress resistance, and reliable performance in complex situations where there is no margin for error.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">06</div>
+        <h4 data-i18n="training.k9.f6.h4">K9 Security Service</h4>
+        <p data-i18n="training.k9.f6.p">Training for private security dogs, protection of people, property, and facilities. Combines obedience, controlled protection work, and stable behavior in a professional commercial security environment.</p>
+      </div>
+    </div>
+    <div style="margin-top:32px;">
+      <a href="german-shepherds.html" class="btn btn-outline btn-arrow" data-i18n="training.k9.btn">K9 Program Details</a>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="light on-light">
+  <div class="wrap" style="max-width:820px;text-align:center;">
+    <p style="font-family:'Cormorant Garamond',serif;font-size:32px;line-height:1.35;font-style:italic;font-weight:300;" data-i18n="training.quote.q">"Every exercise has a reason. Every correction has a purpose. Precision is not a style, it is the standard."</p>
+    <p style="margin-top:24px;font-size:14px;letter-spacing:0.1em;text-transform:uppercase;" data-i18n="training.quote.a">- Dejan Simović · Simpor Dog Center</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-strip">
+  <img class="cta-bg" src="../kucici/trening2.jpeg" alt=""/>
+  <div class="cta-strip-inner">
+    <span class="eyebrow" data-i18n="training.cta.eyebrow">Start Your Training</span>
+    <h2 data-i18n="training.cta.h2">Talk to us about your dog.</h2>
+    <p data-i18n="training.cta.p">Contact us to discuss your goals, your dog's level, and the right program for you.</p>
+    <a href="contact.html" class="btn btn-primary btn-arrow" data-i18n="training.cta.btn">Enquire About Training</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="footer-brand">SIM<em>POR</em></a>
+        <p class="footer-about" data-i18n="footer.about">Simpor is a working German Shepherd kennel and protection dog training facility based in Serbia. FCI 3428. Est. 1994.</p>
+        <div class="footer-social" style="margin-top:24px;">
+          <a href="#">IG</a><a href="#">FB</a><a href="#">YT</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.h.programs">Training</h5>
+        <ul>
+          <li><a href="family-protection.html" data-i18n="footer.obedience">Obedience</a></li>
+          <li><a href="executive-protection.html" data-i18n="footer.protection">Protection &amp; K9</a></li>
+          <li><a href="german-shepherds.html" data-i18n="footer.k9">K9 Programs</a></li>
+          <li><a href="training-programs.html" data-i18n="footer.all">All Categories</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.h.company">Company</h5>
+        <ul>
+          <li><a href="about.html" data-i18n="footer.about.link">About Simpor</a></li>
+          <li><a href="how-it-works.html" data-i18n="footer.how">How It Works</a></li>
+          <li><a href="testimonials.html" data-i18n="footer.testimonials">Testimonials</a></li>
+          <li><a href="faq.html" data-i18n="footer.faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.h.contact">Contact</h5>
+        <ul>
+          <li><a href="tel:+381644919030">+381 64 4919030</a></li>
+          <li><a href="mailto:Simpordogcentar1@gmail.com">Simpordogcentar1@gmail.com</a></li>
+          <li data-i18n="footer.location">Serbia · Europe</li>
+          <li><a href="contact.html" data-i18n="footer.book">Book a Call</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div data-i18n="footer.copy">© 2026 Simpor Dog Center. All rights reserved.</div>
+      <div data-i18n="footer.reg">FCI 3428 · Est. 1994</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

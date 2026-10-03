@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title data-i18n="obedience.title">Obedience (All Breeds), Simpor Dog Center</title>
+<meta name="description" content="Simpor Obedience programs for all breeds, basic obedience, advanced training with tricks and precision, and BH/IGP obedience preparation to international standards."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<script src="js/lang.js" defer></script>
+<style>
+/* Program level card (dark-on-light hybrid) */
+.level-card{ display:grid; grid-template-columns:1.1fr 1fr; gap:60px; align-items:center; margin-bottom:80px; }
+.level-card.reverse{ direction:rtl; }
+.level-card.reverse > *{ direction:ltr; }
+.level-card .level-media{ border-radius:var(--radius-lg); overflow:hidden; aspect-ratio:4/5; background:#0f0f11; }
+.level-card .level-media img{ width:100%; height:100%; object-fit:cover; transition:transform 1.2s var(--ease); }
+.level-card:hover .level-media img{ transform:scale(1.03); }
+.level-body .level-tag{ display:inline-block; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+.level-body h2{ margin:0 0 20px; }
+.tag-row{ display:flex; flex-wrap:wrap; gap:8px; margin-top:24px; }
+.tag-row span{ padding:6px 14px; border:1px solid var(--line-dark); border-radius:999px; font-size:12px; letter-spacing:.08em; color:var(--ink-dim); }
+section.light .tag-row span{ border-color:var(--line-light); color:var(--ink-dark-2); }
+/* Gallery strip */
+.gal-strip{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:14px; }
+.gal-strip .gal-thumb{ aspect-ratio:1/1; overflow:hidden; border-radius:10px; cursor:pointer; background:#0f0f11; }
+.gal-strip .gal-thumb img{ width:100%; height:100%; object-fit:cover; transition:transform .6s var(--ease), filter .3s ease; filter:brightness(.92); }
+.gal-strip .gal-thumb:hover img{ transform:scale(1.08); filter:brightness(1); }
+/* Video card */
+.video-block{ margin:48px auto 0; max-width:820px; }
+.video-block .v-eyebrow{ font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); text-align:center; margin-bottom:18px; }
+.video-block .v-card{ display:block; border-radius:var(--radius-lg); overflow:hidden; background:#000; border:1px solid var(--line-dark); }
+.video-block .v-title{ padding:14px 18px; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--ink-dim); border-bottom:1px solid var(--line-dark); background:var(--bg-2); }
+.video-block .v-frame{ position:relative; padding-bottom:56.25%; overflow:hidden; }
+.video-block .v-frame img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .6s var(--ease); }
+.video-block .v-card:hover .v-frame img{ transform:scale(1.04); }
+.video-block .v-play{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); opacity:.9; pointer-events:none; filter:drop-shadow(0 2px 12px rgba(0,0,0,.6)); }
+.video-block video{ width:100%; display:block; aspect-ratio:16/9; background:#000; }
+.video-grid-2{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+@media (max-width: 900px){
+  .level-card{ grid-template-columns:1fr; gap:32px; margin-bottom:56px; }
+  .video-grid-2{ grid-template-columns:1fr; }
+}
+/* Lightbox */
+#lb{ position:fixed; inset:0; background:rgba(0,0,0,.94); backdrop-filter:blur(10px); z-index:200; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .3s ease; }
+#lb.open{ opacity:1; pointer-events:all; }
+#lb img{ max-width:88vw; max-height:86vh; object-fit:contain; border:1px solid rgba(200,164,91,.25); border-radius:8px; }
+#lb .lb-close, #lb .lb-prev, #lb .lb-next{ position:absolute; color:var(--gold); background:rgba(200,164,91,.1); border:1px solid rgba(200,164,91,.25); font-size:20px; cursor:pointer; padding:12px 16px; border-radius:8px; transition:background .3s; }
+#lb .lb-close{ top:28px; right:36px; }
+#lb .lb-prev{ left:28px; top:50%; transform:translateY(-50%); }
+#lb .lb-next{ right:28px; top:50%; transform:translateY(-50%); }
+#lb .lb-close:hover, #lb .lb-prev:hover, #lb .lb-next:hover{ background:rgba(200,164,91,.22); }
+</style>
+</head>
+<body>
+
+<div id="loader"><div class="loader-mark">SIM<em>POR</em></div></div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-brand">SIM<em>POR</em></a>
+  <ul class="nav-links">
+    <li><a href="obedience.html" class="has-caret" data-i18n="nav.training">Training Services</a>
+      <ul class="submenu">
+        <li><a href="obedience.html" data-i18n="nav.training.obedience">Obedience (All Breeds)</a></li>
+        <li><a href="protection-k9.html" data-i18n="nav.training.protection">Protection &amp; K9 Work</a></li>
+        <li><a href="show-sport.html" data-i18n="nav.training.showsport">Show &amp; Sport</a></li>
+        <li><a href="bh-igp.html" data-i18n="nav.training.bhigp">BH / IGP Foundation</a></li>
+        <li><a href="kkl-ztp.html" data-i18n="nav.training.kklztp">KKL &amp; ZTP Licenses</a></li>
+        <li><a href="k9-programs.html" data-i18n="nav.training.k9">K9 Programs</a></li>
+      </ul>
+    </li>
+    <li><a href="available-dogs.html" data-i18n="nav.available">Available Dogs</a></li>
+    <li><a href="about.html" data-i18n="nav.about">About</a></li>
+    <li><a href="how-it-works.html" data-i18n="nav.process">Process</a></li>
+    <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:+381644919030" class="nav-login">+381 64 4919030</a>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+      <span class="lang-sep">/</span>
+      <button class="lang-btn" data-lang="sr" onclick="setLang('sr')">SR</button>
+    </div>
+    <a href="contact.html" class="nav-cta" data-i18n="nav.book">Book a Call</a>
+    <button class="hamburger" id="hamburger" data-i18n-aria="nav.hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" data-i18n="mobile.home">Home</a>
+  <div class="mobile-submenu">
+    <button class="mobile-submenu-toggle" data-i18n="mobile.training">Training Services</button>
+    <div class="mobile-submenu-items">
+      <a href="obedience.html" data-i18n="nav.training.obedience">Obedience (All Breeds)</a>
+      <a href="protection-k9.html" data-i18n="nav.training.protection">Protection &amp; K9 Work</a>
+      <a href="show-sport.html" data-i18n="nav.training.showsport">Show &amp; Sport</a>
+      <a href="bh-igp.html" data-i18n="nav.training.bhigp">BH / IGP Foundation</a>
+      <a href="kkl-ztp.html" data-i18n="nav.training.kklztp">KKL &amp; ZTP Licenses</a>
+      <a href="k9-programs.html" data-i18n="nav.training.k9">K9 Programs</a>
+    </div>
+  </div>
+  <a href="available-dogs.html" data-i18n="mobile.available">Available Dogs</a>
+  <a href="about.html" data-i18n="mobile.about">About</a>
+  <a href="how-it-works.html" data-i18n="mobile.process">Process</a>
+  <a href="testimonials.html" data-i18n="mobile.testimonials">Testimonials</a>
+  <a href="faq.html" data-i18n="mobile.faq">FAQ</a>
+  <a href="contact.html" data-i18n="mobile.contact">Contact</a>
+  <div class="lang-switcher">
+    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    <span class="lang-sep">/</span>
+    <button class="lang-btn" data-lang="sr" onclick="setLang('sr')">SR</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="obedience.hero.eyebrow">Category 01 · Obedience (All Breeds)</span>
+    <h1 data-i18n="obedience.hero.h1">Obedience, for every breed,<br/>at every level.</h1>
+    <p class="lead" data-i18n="obedience.hero.lead">From basic foundations for family dogs to elite IGP competition preparation, our obedience programs cover every stage of development with precision and care.</p>
+    <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;">
+      <a href="contact.html" class="btn btn-primary btn-arrow" data-i18n="obedience.hero.cta1">Enquire About Training</a>
+      <a href="protection-k9.html" class="btn btn-outline" data-i18n="obedience.hero.cta2">Protection &amp; K9 Work →</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding:0;">
+  <img src="images/trening1.jpeg" alt="Obedience training" style="width:100%;height:60vh;object-fit:cover;"/>
+</section>
+
+<!-- INTRO -->
+<section>
+  <div class="wrap">
+    <div class="section-split">
+      <div>
+        <span class="eyebrow" data-i18n="obedience.intro.eyebrow">The Foundation</span>
+        <h2 data-i18n="obedience.intro.h2">Obedience is where every working dog begins.</h2>
+        <p data-i18n="obedience.intro.p1">Whether the goal is a stable family companion, a titled sport competitor, or a professional K9, the foundation is the same. Reliable obedience is what separates a dog that can be trusted anywhere from a dog that can only be trusted in familiar places.</p>
+        <p data-i18n="obedience.intro.p2">At Simpor Dog Center, obedience is offered as a full curriculum in three progressive levels, open to all breeds and all ages. Each level is taught with the same technique used to prepare our IGP competitors, the difference is only how far the training goes.</p>
+      </div>
+      <div class="split-media"><img src="images/trening2.jpeg" alt="Obedience training in action"/></div>
+    </div>
+  </div>
+</section>
+
+<!-- LEVEL 01: BASIC -->
+<section class="soft">
+  <div class="wrap">
+    <div class="level-card">
+      <div class="level-media"><img src="images/basic/16.jpg" alt="Basic Obedience Training"/></div>
+      <div class="level-body">
+        <span class="level-tag" data-i18n="obedience.b.tag">Obedience 01 · Foundation Level</span>
+        <h2 data-i18n="obedience.b.h2">Basic Obedience.</h2>
+        <p data-i18n="obedience.b.p">The focus of this training is on basic commands, proper leash walking, socialization, and reducing unwanted behavior. This level creates the foundation for further work and allows owners to communicate with their dog more easily and confidently in everyday life.</p>
+        <div class="tag-row">
+          <span data-i18n="obedience.b.t1">All Breeds</span>
+          <span data-i18n="obedience.b.t2">All Ages</span>
+          <span data-i18n="obedience.b.t3">Foundation Level</span>
+        </div>
+        <div class="gal-strip">
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/basic/3.jpg","images/basic/46.jpeg","images/basic/47.jpeg","images/basic/n1.jpeg","images/basic/n2.jpeg","images/basic/n3.jpeg","images/basic/n4.jpeg","images/basic/n5.jpeg"]' data-idx="0"><img src="images/basic/3.jpg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/basic/3.jpg","images/basic/46.jpeg","images/basic/47.jpeg","images/basic/n1.jpeg","images/basic/n2.jpeg","images/basic/n3.jpeg","images/basic/n4.jpeg","images/basic/n5.jpeg"]' data-idx="1"><img src="images/basic/46.jpeg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/basic/3.jpg","images/basic/46.jpeg","images/basic/47.jpeg","images/basic/n1.jpeg","images/basic/n2.jpeg","images/basic/n3.jpeg","images/basic/n4.jpeg","images/basic/n5.jpeg"]' data-idx="3"><img src="images/basic/n1.jpeg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/basic/3.jpg","images/basic/46.jpeg","images/basic/47.jpeg","images/basic/n1.jpeg","images/basic/n2.jpeg","images/basic/n3.jpeg","images/basic/n4.jpeg","images/basic/n5.jpeg"]' data-idx="4"><img src="images/basic/n2.jpeg" alt=""/></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video: Basic Obedience -->
+    <div class="video-block">
+      <p class="v-eyebrow" data-i18n="obedience.b.watch">Watch in Action · Basic Obedience</p>
+      <div class="video-grid-2">
+        <a class="v-card" href="https://www.youtube.com/watch?v=6Uh5rmeL548" target="_blank" rel="noopener">
+          <div class="v-title">Basic Obedience</div>
+          <div class="v-frame">
+            <img src="https://img.youtube.com/vi/6Uh5rmeL548/hqdefault.jpg" alt="Basic Obedience" loading="lazy"/>
+            <div class="v-play"><svg viewBox="0 0 68 48" width="60" height="42"><path d="M66.52 7.74A8.54 8.54 0 0 0 60.7 1.9C55.4 0 34 0 34 0S12.6 0 7.3 1.9A8.54 8.54 0 0 0 1.48 7.74C0 13.07 0 24 0 24s0 10.93 1.48 16.26A8.54 8.54 0 0 0 7.3 46.1C12.6 48 34 48 34 48s21.4 0 26.7-1.9a8.54 8.54 0 0 0 5.82-5.84C68 34.93 68 24 68 24s0-10.93-1.48-16.26z" fill="#ff0000"/><path d="M27 34l18-10-18-10v20z" fill="#fff"/></svg></div>
+          </div>
+        </a>
+        <div class="v-card">
+          <div class="v-title">Basic Obedience, In Real Life</div>
+          <video controls preload="metadata"><source src="videozabasic.mp4" type="video/mp4"/></video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEVEL 02: ADVANCED -->
+<section>
+  <div class="wrap">
+    <div class="level-card reverse">
+      <div class="level-media"><img src="images/advanced/g12.jpg" alt="Advanced Obedience"/></div>
+      <div class="level-body">
+        <span class="level-tag" data-i18n="obedience.a.tag">Obedience 02 · Advanced Level</span>
+        <h2 data-i18n="obedience.a.h2">Advanced, Tricks &amp; Improvements.</h2>
+        <p data-i18n="obedience.a.p">The advanced obedience level is intended for dogs that have already completed the basic and intermediate stages. The program focuses on further developing control, creative exercises, tricks, and advanced commands that improve the dog's concentration, flexibility, and working motivation. Ideal for owners wanting a higher level of communication and mental stimulation.</p>
+        <div class="tag-row">
+          <span data-i18n="obedience.a.t1">Advanced Level</span>
+          <span data-i18n="obedience.a.t2">Mental Stimulation</span>
+          <span data-i18n="obedience.a.t3">Tricks &amp; Precision</span>
+        </div>
+        <div class="gal-strip">
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/advanced/5.jpg","images/advanced/6.jpg","images/advanced/14.jpg","images/advanced/g12.jpg","images/advanced/n1.jpeg","images/advanced/n2.jpeg","images/advanced/n3.jpeg","images/advanced/n4.jpeg","images/advanced/n5.jpeg","images/advanced/n6.jpeg","images/advanced/n7.jpeg","images/advanced/n8.jpeg"]' data-idx="0"><img src="images/advanced/5.jpg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/advanced/5.jpg","images/advanced/6.jpg","images/advanced/14.jpg","images/advanced/g12.jpg","images/advanced/n1.jpeg","images/advanced/n2.jpeg","images/advanced/n3.jpeg","images/advanced/n4.jpeg","images/advanced/n5.jpeg","images/advanced/n6.jpeg","images/advanced/n7.jpeg","images/advanced/n8.jpeg"]' data-idx="1"><img src="images/advanced/6.jpg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/advanced/5.jpg","images/advanced/6.jpg","images/advanced/14.jpg","images/advanced/g12.jpg","images/advanced/n1.jpeg","images/advanced/n2.jpeg","images/advanced/n3.jpeg","images/advanced/n4.jpeg","images/advanced/n5.jpeg","images/advanced/n6.jpeg","images/advanced/n7.jpeg","images/advanced/n8.jpeg"]' data-idx="4"><img src="images/advanced/n1.jpeg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/advanced/5.jpg","images/advanced/6.jpg","images/advanced/14.jpg","images/advanced/g12.jpg","images/advanced/n1.jpeg","images/advanced/n2.jpeg","images/advanced/n3.jpeg","images/advanced/n4.jpeg","images/advanced/n5.jpeg","images/advanced/n6.jpeg","images/advanced/n7.jpeg","images/advanced/n8.jpeg"]' data-idx="5"><img src="images/advanced/n2.jpeg" alt=""/></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video: Advanced Obedience -->
+    <div class="video-block">
+      <p class="v-eyebrow" data-i18n="obedience.a.watch">Watch in Action · Advanced Obedience</p>
+      <a class="v-card" href="https://www.youtube.com/watch?v=2oESdV_X_wc" target="_blank" rel="noopener">
+        <div class="v-title">Advanced Obedience</div>
+        <div class="v-frame">
+          <img src="https://img.youtube.com/vi/2oESdV_X_wc/hqdefault.jpg" alt="Advanced Obedience" loading="lazy"/>
+          <div class="v-play"><svg viewBox="0 0 68 48" width="60" height="42"><path d="M66.52 7.74A8.54 8.54 0 0 0 60.7 1.9C55.4 0 34 0 34 0S12.6 0 7.3 1.9A8.54 8.54 0 0 0 1.48 7.74C0 13.07 0 24 0 24s0 10.93 1.48 16.26A8.54 8.54 0 0 0 7.3 46.1C12.6 48 34 48 34 48s21.4 0 26.7-1.9a8.54 8.54 0 0 0 5.82-5.84C68 34.93 68 24 68 24s0-10.93-1.48-16.26z" fill="#ff0000"/><path d="M27 34l18-10-18-10v20z" fill="#fff"/></svg></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- LEVEL 03: BH / IGP OBEDIENCE -->
+<section class="soft">
+  <div class="wrap">
+    <div class="level-card">
+      <div class="level-media"><img src="images/Sport/25.jpg" alt="BH IGP Obedience"/></div>
+      <div class="level-body">
+        <span class="level-tag" data-i18n="obedience.igp.tag">Obedience 03 · Sport Level</span>
+        <h2 data-i18n="obedience.igp.h2">BH / IGP Obedience.</h2>
+        <p data-i18n="obedience.igp.p">This program is designed for dogs preparing for BH and IGP examinations in accordance with current international regulations. Training includes sport-level obedience work, precision in performing exercises, stability under pressure, and reliable work in different situations. Special emphasis is placed on correct technique and preparation for examination and competition.</p>
+        <div class="tag-row">
+          <span data-i18n="obedience.igp.t1">Sport Level</span>
+          <span data-i18n="obedience.igp.t2">IGP 1–3</span>
+          <span data-i18n="obedience.igp.t3">Competition Ready</span>
+          <span data-i18n="obedience.igp.t4">FCI Standards</span>
+        </div>
+        <div class="gal-strip">
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/Sport/39.jpeg","images/Sport/40.jpeg","images/Sport/dogs4.jpg","images/Sport/eksn3.jpg","images/Sport/n1.jpeg","images/Sport/n2.jpeg","images/Sport/n3.jpeg","images/Sport/n4.jpeg","images/Sport/n5.jpeg","images/Sport/n6.jpeg"]' data-idx="0"><img src="images/Sport/39.jpeg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/Sport/39.jpeg","images/Sport/40.jpeg","images/Sport/dogs4.jpg","images/Sport/eksn3.jpg","images/Sport/n1.jpeg","images/Sport/n2.jpeg","images/Sport/n3.jpeg","images/Sport/n4.jpeg","images/Sport/n5.jpeg","images/Sport/n6.jpeg"]' data-idx="1"><img src="images/Sport/40.jpeg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/Sport/39.jpeg","images/Sport/40.jpeg","images/Sport/dogs4.jpg","images/Sport/eksn3.jpg","images/Sport/n1.jpeg","images/Sport/n2.jpeg","images/Sport/n3.jpeg","images/Sport/n4.jpeg","images/Sport/n5.jpeg","images/Sport/n6.jpeg"]' data-idx="4"><img src="images/Sport/n1.jpeg" alt=""/></div>
+          <div class="gal-thumb" onclick="openLb(this)" data-imgs='["images/Sport/39.jpeg","images/Sport/40.jpeg","images/Sport/dogs4.jpg","images/Sport/eksn3.jpg","images/Sport/n1.jpeg","images/Sport/n2.jpeg","images/Sport/n3.jpeg","images/Sport/n4.jpeg","images/Sport/n5.jpeg","images/Sport/n6.jpeg"]' data-idx="5"><img src="images/Sport/n2.jpeg" alt=""/></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video: BH / IGP Obedience -->
+    <div class="video-block">
+      <p class="v-eyebrow" data-i18n="obedience.igp.watch">BH / IGP Obedience, In Action</p>
+      <div class="video-grid-2">
+        <a class="v-card" href="https://www.youtube.com/watch?v=mybNDimilqY" target="_blank" rel="noopener">
+          <div class="v-title">IGP 3</div>
+          <div class="v-frame">
+            <img src="https://img.youtube.com/vi/mybNDimilqY/hqdefault.jpg" alt="IGP 3" loading="lazy"/>
+            <div class="v-play"><svg viewBox="0 0 68 48" width="60" height="42"><path d="M66.52 7.74A8.54 8.54 0 0 0 60.7 1.9C55.4 0 34 0 34 0S12.6 0 7.3 1.9A8.54 8.54 0 0 0 1.48 7.74C0 13.07 0 24 0 24s0 10.93 1.48 16.26A8.54 8.54 0 0 0 7.3 46.1C12.6 48 34 48 34 48s21.4 0 26.7-1.9a8.54 8.54 0 0 0 5.82-5.84C68 34.93 68 24 68 24s0-10.93-1.48-16.26z" fill="#ff0000"/><path d="M27 34l18-10-18-10v20z" fill="#fff"/></svg></div>
+          </div>
+        </a>
+        <a class="v-card" href="https://www.youtube.com/watch?v=41zecLzZvDc" target="_blank" rel="noopener">
+          <div class="v-title">BH / IGP 1</div>
+          <div class="v-frame">
+            <img src="https://img.youtube.com/vi/41zecLzZvDc/hqdefault.jpg" alt="BH IGP 1" loading="lazy"/>
+            <div class="v-play"><svg viewBox="0 0 68 48" width="60" height="42"><path d="M66.52 7.74A8.54 8.54 0 0 0 60.7 1.9C55.4 0 34 0 34 0S12.6 0 7.3 1.9A8.54 8.54 0 0 0 1.48 7.74C0 13.07 0 24 0 24s0 10.93 1.48 16.26A8.54 8.54 0 0 0 7.3 46.1C12.6 48 34 48 34 48s21.4 0 26.7-1.9a8.54 8.54 0 0 0 5.82-5.84C68 34.93 68 24 68 24s0-10.93-1.48-16.26z" fill="#ff0000"/><path d="M27 34l18-10-18-10v20z" fill="#fff"/></svg></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S COVERED IN EVERY LEVEL -->
+<section class="light on-light tight">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow on-light" data-i18n="obedience.cov.eyebrow">Included in Every Level</span>
+      <h2 data-i18n="obedience.cov.h2">The Simpor obedience foundation.</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><h4 data-i18n="obedience.cov.f1.h4">Individual assessment</h4><p data-i18n="obedience.cov.f1.p">Every dog is evaluated before training begins, drive, temperament, prior experience, and the specific goals of the owner.</p></div>
+      <div class="feature"><h4 data-i18n="obedience.cov.f2.h4">Structured progression</h4><p data-i18n="obedience.cov.f2.p">Each level builds directly on the last. No shortcuts, no rushed advancement, the dog moves forward only when the foundation is solid.</p></div>
+      <div class="feature"><h4 data-i18n="obedience.cov.f3.h4">Handler involvement</h4><p data-i18n="obedience.cov.f3.p">Owners and handlers are trained alongside the dog, so the work continues at home with the same technique and consistency.</p></div>
+      <div class="feature"><h4 data-i18n="obedience.cov.f4.h4">Certified professionals</h4><p data-i18n="obedience.cov.f4.p">Every session is conducted by certified trainers under the direct supervision of founder Dejan Simović.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <img class="cta-bg" src="../kucici/g15.jpeg" alt=""/>
+  <div class="cta-strip-inner">
+    <span class="eyebrow" data-i18n="obedience.cta.eyebrow">Obedience Training</span>
+    <h2 data-i18n="obedience.cta.h2">Start with the right foundation.</h2>
+    <p data-i18n="obedience.cta.p">Whether your goal is a well-behaved family dog or an IGP competitor, obedience is where it starts. Contact us to discuss the right level for your dog.</p>
+    <a href="contact.html" class="btn btn-primary btn-arrow" data-i18n="obedience.cta.btn">Enquire About Training</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="footer-brand">SIM<em>POR</em></a>
+        <p class="footer-about" data-i18n="footer.about">Simpor is a working German Shepherd kennel and protection dog training facility based in Serbia. FCI 3428. Est. 1994.</p>
+        <div class="footer-social" style="margin-top:24px;">
+          <a href="https://www.instagram.com/simpor_dogcentar/" target="_blank" rel="noopener" aria-label="Instagram Dog Center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.instagram.com/simpor_dog_resort/" target="_blank" rel="noopener" aria-label="Instagram Resort"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.facebook.com/simpork9/?locale=sr_RS" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.youtube.com/@simpordogcenter" target="_blank" rel="noopener" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96C1 8.13 1 12 1 12s0 3.87.46 5.58a2.78 2.78 0 0 0 1.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.97C23 15.87 23 12 23 12s0-3.87-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h5 data-i18n="footer.h.programs">Training</h5><ul>
+        <li><a href="obedience.html" data-i18n="footer.obedience">Obedience</a></li>
+        <li><a href="protection-k9.html" data-i18n="footer.protection">Protection &amp; K9</a></li>
+        <li><a href="show-sport.html" data-i18n="footer.showsport">Show &amp; Sport</a></li>
+        <li><a href="bh-igp.html" data-i18n="footer.bhigp">BH / IGP Foundation</a></li>
+        <li><a href="kkl-ztp.html" data-i18n="footer.kklztp">KKL &amp; ZTP</a></li>
+        <li><a href="k9-programs.html" data-i18n="footer.k9">K9 Programs</a></li>
+      </ul></div>
+      <div class="footer-col"><h5 data-i18n="footer.h.company">Company</h5><ul>
+        <li><a href="about.html" data-i18n="footer.about.link">About Simpor</a></li>
+        <li><a href="how-it-works.html" data-i18n="footer.how">How It Works</a></li>
+        <li><a href="testimonials.html" data-i18n="footer.testimonials">Testimonials</a></li>
+        <li><a href="faq.html" data-i18n="footer.faq">FAQ</a></li>
+      </ul></div>
+      <div class="footer-col"><h5 data-i18n="footer.h.contact">Contact</h5><ul>
+        <li><a href="tel:+381644919030">+381 64 4919030</a></li>
+        <li><a href="mailto:Simpordogcentar1@gmail.com">Simpordogcentar1@gmail.com</a></li>
+        <li data-i18n="footer.location">Serbia · Europe</li>
+        <li><a href="contact.html" data-i18n="footer.book">Book a Call</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div data-i18n="footer.copy">© 2026 Simpor Dog Center. All rights reserved.</div>
+      <div data-i18n="footer.reg">FCI 3428 · Est. 1994</div>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lb">
+  <button class="lb-close" onclick="closeLb()">×</button>
+  <button class="lb-prev" onclick="lbNav(-1)">&#8592;</button>
+  <img id="lbImg" src="" alt=""/>
+  <button class="lb-next" onclick="lbNav(1)">&#8594;</button>
+</div>
+<script>
+var lbImgs=[],lbIdx=0;
+function openLb(el){lbImgs=JSON.parse(el.dataset.imgs);lbIdx=parseInt(el.dataset.idx);document.getElementById('lbImg').src=lbImgs[lbIdx];document.getElementById('lb').classList.add('open');document.body.style.overflow='hidden';}
+function closeLb(){document.getElementById('lb').classList.remove('open');document.body.style.overflow='';}
+function lbNav(d){lbIdx=(lbIdx+d+lbImgs.length)%lbImgs.length;document.getElementById('lbImg').src=lbImgs[lbIdx];}
+document.getElementById('lb').addEventListener('click',function(e){if(e.target===this)closeLb();});
+document.addEventListener('keydown',function(e){if(!document.getElementById('lb').classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')lbNav(-1);if(e.key==='ArrowRight')lbNav(1);});
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

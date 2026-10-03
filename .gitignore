@@ -1,0 +1,14 @@
+# Local review screenshots
+/.impeccable/
+/_*.png
+
+# Accidental copy folders containing duplicate image assets
+/images* && cp -r */
+
+# Local dependencies, credentials, and operating system files
+node_modules/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db

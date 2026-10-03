@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title data-i18n="home.title">Simpor, Elite Working Dogs From European Bloodlines</title>
+<meta name="description" content="Simpor breeds and places elite working dogs, German Shepherds, Dobermans, Rottweilers, Malinois and other K9s from European working bloodlines. Placed all over the world."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<script src="js/lang.js" defer></script>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader"><div class="loader-mark">SIM<em>POR</em></div></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-brand">SIM<em>POR</em></a>
+  <ul class="nav-links">
+    <li><a href="https://simpork9.com/training" target="_blank" rel="noopener" data-i18n="nav.training">Training Services</a></li>
+    <li><a href="available-dogs.html" data-i18n="nav.available">Available Dogs</a></li>
+    <li><a href="about.html" class="has-caret" data-i18n="nav.about">About Us</a>
+      <ul class="submenu">
+        <li><a href="why-simpor.html" data-i18n="nav.about.why">Why Simpor</a></li>
+        <li><a href="about.html" data-i18n="nav.about.approach">Our Approach</a></li>
+        <li><a href="testimonials.html" data-i18n="nav.about.testimonials">Testimonials</a></li>
+      </ul>
+    </li>
+    <li><a href="how-it-works.html" data-i18n="nav.process">Process</a></li>
+    <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:+381644919030" class="nav-login">+381 64 4919030</a>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+      <span class="lang-sep">/</span>
+      <button class="lang-btn" data-lang="sr" onclick="setLang('sr')">SR</button>
+    </div>
+    <a href="contact.html" class="nav-cta" data-i18n="nav.book">Book a Call</a>
+    <button class="hamburger" id="hamburger" data-i18n-aria="nav.hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" data-i18n="mobile.home">Home</a>
+  <a href="https://simpork9.com/training" target="_blank" rel="noopener" data-i18n="mobile.training">Training Services</a>
+  <a href="available-dogs.html" data-i18n="mobile.available">Available Dogs</a>
+  <div class="mobile-submenu">
+    <button class="mobile-submenu-toggle" data-i18n="mobile.about">About Us</button>
+    <div class="mobile-submenu-items">
+      <a href="why-simpor.html" data-i18n="nav.about.why">Why Simpor</a>
+      <a href="about.html" data-i18n="nav.about.approach">Our Approach</a>
+      <a href="testimonials.html" data-i18n="nav.about.testimonials">Testimonials</a>
+    </div>
+  </div>
+  <a href="how-it-works.html" data-i18n="mobile.process">Process</a>
+  <a href="faq.html" data-i18n="mobile.faq">FAQ</a>
+  <a href="contact.html" data-i18n="mobile.contact">Contact</a>
+  <div class="lang-switcher">
+    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    <span class="lang-sep">/</span>
+    <button class="lang-btn" data-lang="sr" onclick="setLang('sr')">SR</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="images/profi.jpg" alt="Simpor handler with trained working dogs"/>
+  </div>
+  <div class="hero-inner">
+    <span class="eyebrow" data-i18n="home.hero.eyebrow">Simpor Working Kennel · Est. 1994</span>
+    <h1 class="hero-title" data-i18n="home.hero.h1">Working dogs<br/>you can <span class="serif-em">rely on.</span></h1>
+    <p class="hero-sub" data-i18n="home.hero.sub">Elite working dogs from three decades of European bloodline development, German Shepherds, Dobermans, Rottweilers, Malinois, and other K9s. Placed all over the world.</p>
+    <div class="hero-cta-row">
+      <a href="#dogs-for-sale" class="btn btn-primary btn-arrow" data-i18n="home.hero.cta1">Explore Our Dogs</a>
+      <a href="#sold-dogs" class="btn btn-outline" data-i18n="home.hero.cta2">Placed Worldwide</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num" data-i18n="home.stat1.num">30+</div><div class="stat-label" data-i18n="home.stat1.lbl">Years of Breeding</div></div>
+      <div><div class="stat-num" data-i18n="home.stat2.num">20+</div><div class="stat-label" data-i18n="home.stat2.lbl">Countries Placed</div></div>
+      <div><div class="stat-num" data-i18n="home.stat3.num">FCI 3428</div><div class="stat-label" data-i18n="home.stat3.lbl">Registered Kennel</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO, DIFFERENCE YOU CAN SEE -->
+<section class="intro tone-warm" id="intro">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div class="intro-copy">
+        <span class="eyebrow" data-i18n="home.intro.eyebrow">The Difference You Can See</span>
+        <h2 data-i18n="home.intro.h2">Three decades of working dogs, refined one dog at a time.</h2>
+        <p class="lead" data-i18n="home.intro.lead">Every dog we place is bred, evaluated, and prepared under one roof, from bloodlines we've spent thirty years perfecting.</p>
+        <p data-i18n="home.intro.p">Founded in 1993 and registered with the FCI under number 3428, our kennel specializes in working-line dogs bred for temperament, nerve strength, and function, not paperwork alone. Our approach is quality over quantity, always.</p>
+        <ul class="facts">
+          <li data-i18n="home.intro.li1">FCI 3428 registered working kennel, Serbia</li>
+          <li data-i18n="home.intro.li2">IPO/IGP-titled parents, hip &amp; elbow certified</li>
+          <li data-i18n="home.intro.li3">Master breeder with 30+ years of experience</li>
+          <li data-i18n="home.intro.li4">Dogs raised in-home with children and family pets</li>
+        </ul>
+        <a href="about.html" class="btn btn-outline btn-arrow" data-i18n="home.intro.btn">Learn About Simpor</a>
+      </div>
+      <div class="intro-media">
+        <div class="collage">
+          <a href="images/founder1.jpeg" class="collage-item collage-lg" aria-label="Simpor founder">
+            <img src="images/founder1.jpeg" alt="Simpor founder"/>
+            <span class="collage-badge" data-i18n="home.collage.tag1">Founder · Est. 1994</span>
+          </a>
+          <a href="images/trofej1.jpg" class="collage-item collage-tr" aria-label="Championship trophies">
+            <img src="images/trofej1.jpg" alt="Championship trophies"/>
+          </a>
+          <a href="images/pocetna2.jpg" class="collage-item collage-mr" aria-label="Simpor Dog Center">
+            <img src="images/pocetna2.jpg" alt="Simpor Dog Center"/>
+          </a>
+          <a href="images/trofej2.jpg" class="collage-item collage-br" aria-label="Working dogs and trophies">
+            <img src="images/trofej2.jpg" alt="Working dogs and trophies"/>
+          </a>
+          <div class="collage-stat">
+            <div class="collage-stat-num" data-i18n="home.collage.stat">30+</div>
+            <div class="collage-stat-lbl" data-i18n="home.collage.statLbl">Years<br/>of Legacy</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER'S WORD, PARALLAX BAND -->
+<section class="band band-quote">
+  <figure class="band-media"><img src="images/web/field-2400.jpg" alt="Simpor handler with working German Shepherds in the field" loading="lazy"/></figure>
+  <div class="wrap band-inner">
+    <blockquote class="band-quote-text" data-i18n="about.mission.q1">"For me, everything begins and ends with the German Shepherd. Understanding this breed, its drives, its temperament, its purpose, has been the work of my life."</blockquote>
+    <div class="band-cite">
+      <span class="band-cite-name">Dejan Simović</span>
+      <span class="band-cite-role" data-i18n="about.founder.role">Founder · Breeder · Trainer</span>
+    </div>
+  </div>
+</section>
+
+<!-- DOGS FOR SALE, WITH BREED CATEGORIES -->
+<section id="dogs-for-sale" class="dogs-section">
+  <div class="wrap">
+    <div class="section-head center-head">
+      <span class="eyebrow" data-i18n="home.sale.eyebrow">Available Dogs · Direct From Breeder</span>
+      <h2 data-i18n="home.sale.h2">Choose your working companion.</h2>
+      <p data-i18n="home.sale.p">Four main breeds plus specialized K9 dogs, one uncompromising standard. Every dog on this page is at Simpor now, raised, evaluated, and ready for placement. Click any dog to view its full profile, gallery, and pedigree.</p>
+    </div>
+
+    <div class="breed-tabs" id="breedTabs">
+      <button class="breed-tab active" data-breed="all" data-i18n="breed.all">All Breeds</button>
+      <button class="breed-tab" data-breed="gsd" data-i18n="breed.gsd">German Shepherd</button>
+      <button class="breed-tab" data-breed="malinois" data-i18n="breed.malinois">Malinois</button>
+      <button class="breed-tab" data-breed="doberman" data-i18n="breed.doberman">Doberman</button>
+      <button class="breed-tab" data-breed="rottweiler" data-i18n="breed.rottweiler">Rottweiler</button>
+      <button class="breed-tab" data-breed="k9" data-i18n="breed.k9">K9</button>
+    </div>
+
+    <div class="dog-showcase" id="dogShowcase">
+      <!-- Cards will be populated / filtered by JS from window.SIMPOR_DOGS -->
+    </div>
+
+    <div class="center mt-lg">
+      <a href="available-dogs.html" class="btn btn-outline btn-arrow" data-i18n="home.sale.btn">View All Available Dogs</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOLD DOGS -->
+<section id="sold-dogs" class="soft sold-section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="home.sold.eyebrow">Placement Archive</span>
+      <h2 data-i18n="home.sold.h2">Dogs already placed with our clients.</h2>
+      <p data-i18n="home.sold.p">A selection of Simpor dogs now living and working with owners across the world. Every dog leaves with a full pedigree file, and stays part of our story.</p>
+    </div>
+
+    <div class="sold-grid" id="soldGrid">
+      <!-- Cards will be populated by JS from window.SIMPOR_SOLD -->
+    </div>
+  </div>
+</section>
+
+<!-- WORLD MAP, WHERE OUR DOGS LIVE -->
+<section class="worldmap-section">
+  <div class="wrap">
+    <div class="section-head center-head">
+      <span class="eyebrow" data-i18n="home.map.eyebrow">Our Dogs, Worldwide</span>
+      <h2 data-i18n="home.map.h2">From our kennel to four continents.</h2>
+      <p data-i18n="home.map.p">Every glowing point on this map is a Simpor dog placed with a family, an executive, or a professional handler. Hover a point to see where it went.</p>
+    </div>
+
+    <div class="worldmap-wrap">
+      <div class="worldmap" id="worldMap">
+        <div class="worldmap-bg" aria-hidden="true"></div>
+        <div class="worldmap-vignette" aria-hidden="true"></div>
+        <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" class="worldmap-svg" preserveAspectRatio="none">
+          <defs>
+            <radialGradient id="dotGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#d9bd80" stop-opacity="1"/>
+              <stop offset="70%" stop-color="#d9bd80" stop-opacity=".25"/>
+              <stop offset="100%" stop-color="#d9bd80" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <!-- Dots for placed dogs, equirectangular fit to slikasveta.png (xc=570.4, sx=3.62px/°, yc=377.7, sy=3.55px/°) -->
+          <g class="worldmap-dots">
+            <!-- USA (central, Kansas ≈ 39N, -98.5) -->
+            <g class="dot-group" data-country="United States" data-dogs="8" data-year="2019–2026">
+              <circle class="dot-glow" cx="169" cy="173" r="18"/>
+              <circle class="dot-core" cx="169" cy="173" r="4"/>
+            </g>
+            <!-- Argentina (Buenos Aires ≈ -34.6S, -58.4) -->
+            <g class="dot-group" data-country="Argentina" data-dogs="4" data-year="2022–2025">
+              <circle class="dot-glow" cx="305" cy="388" r="18"/>
+              <circle class="dot-core" cx="305" cy="388" r="4"/>
+            </g>
+            <!-- Switzerland (Bern ≈ 46.9N, 7.4) -->
+            <g class="dot-group" data-country="Switzerland" data-dogs="3" data-year="2022–2025">
+              <circle class="dot-glow" cx="490" cy="138" r="14"/>
+              <circle class="dot-core" cx="490" cy="138" r="3.5"/>
+            </g>
+            <!-- Germany (Berlin ≈ 52.5N, 13.4) -->
+            <g class="dot-group" data-country="Germany" data-dogs="12" data-year="2018–2026">
+              <circle class="dot-glow" cx="513" cy="118" r="14"/>
+              <circle class="dot-core" cx="513" cy="118" r="3.5"/>
+            </g>
+            <!-- Austria (Vienna ≈ 48.2N, 16.4) -->
+            <g class="dot-group" data-country="Austria" data-dogs="4" data-year="2020–2026">
+              <circle class="dot-glow" cx="518" cy="134" r="14"/>
+              <circle class="dot-core" cx="518" cy="134" r="3.5"/>
+            </g>
+            <!-- Slovakia (Bratislava ≈ 48.1N, 17.1) -->
+            <g class="dot-group" data-country="Slovakia" data-dogs="5" data-year="2020–2025">
+              <circle class="dot-glow" cx="521" cy="134" r="14"/>
+              <circle class="dot-core" cx="521" cy="134" r="3.5"/>
+            </g>
+            <!-- Serbia (home, Belgrade ≈ 44.8N, 20.5) -->
+            <g class="dot-group dot-home" data-country="Serbia (Kennel)" data-dogs="Home" data-year="Since 1994">
+              <circle class="dot-glow" cx="528" cy="148" r="22"/>
+              <circle class="dot-core" cx="528" cy="148" r="5.5"/>
+            </g>
+            <!-- Saudi Arabia (Riyadh ≈ 24.7N, 46.7) -->
+            <g class="dot-group" data-country="Saudi Arabia" data-dogs="5" data-year="2021–2025">
+              <circle class="dot-glow" cx="610" cy="220" r="16"/>
+              <circle class="dot-core" cx="610" cy="220" r="4"/>
+            </g>
+            <!-- UAE / Dubai (≈ 25.3N, 55.3) -->
+            <g class="dot-group" data-country="United Arab Emirates" data-dogs="6" data-year="2021–2026">
+              <circle class="dot-glow" cx="635" cy="218" r="16"/>
+              <circle class="dot-core" cx="635" cy="218" r="4"/>
+            </g>
+            <!-- South Korea (Seoul ≈ 37.6N, 127.0) -->
+            <g class="dot-group" data-country="South Korea" data-dogs="3" data-year="2023–2025">
+              <circle class="dot-glow" cx="848" cy="173" r="16"/>
+              <circle class="dot-core" cx="848" cy="173" r="4"/>
+            </g>
+            <!-- Japan (Tokyo ≈ 35.7N, 139.7) -->
+            <g class="dot-group" data-country="Japan" data-dogs="2" data-year="2024–2025">
+              <circle class="dot-glow" cx="888" cy="178" r="16"/>
+              <circle class="dot-core" cx="888" cy="178" r="4"/>
+            </g>
+            <!-- Australia (Sydney ≈ -33.9S, 151.2) -->
+            <g class="dot-group" data-country="Australia" data-dogs="3" data-year="2023–2026">
+              <circle class="dot-glow" cx="890" cy="380" r="18"/>
+              <circle class="dot-core" cx="890" cy="380" r="4"/>
+            </g>
+          </g>
+        </svg>
+
+        <div class="worldmap-tooltip" id="worldMapTooltip">
+          <span class="tt-country">Country</span>
+          <span class="tt-dogs">- dogs</span>
+        </div>
+      </div>
+
+      <div class="worldmap-legend">
+        <div class="legend-item"><span class="legend-dot legend-dot-home"></span><span data-i18n="home.map.legend1">Simpor Kennel · Serbia</span></div>
+        <div class="legend-item"><span class="legend-dot"></span><span data-i18n="home.map.legend2">Placed Simpor dogs</span></div>
+      </div>
+    </div>
+
+    <div class="country-tiles" id="countryTiles">
+      <!-- Populated by JS with all placement countries -->
+    </div>
+  </div>
+</section>
+
+<!-- WHY SIMPOR -->
+<section class="why-section tone-warm" data-parallax-track>
+  <div class="wrap">
+    <div class="why-grid">
+      <figure class="why-media"><img src="images/web/handler-1200.jpg" alt="Simpor trainer working a Malinois on the training field" loading="lazy"/></figure>
+      <div class="why-body">
+        <div class="section-head stack why-head">
+          <span class="eyebrow" data-i18n="home.why.eyebrow">Why Simpor</span>
+          <h2 data-i18n="home.why.h2">What sets Simpor apart.</h2>
+          <p data-i18n="home.why.p">Three decades of breeding and raising working dogs under one roof, a standard defined by the dogs we produce, not the promises we make.</p>
+        </div>
+        <ul class="why-list">
+          <li class="why-item">
+            <h3 data-i18n="home.why.f1.h4">Three generations of expertise</h3>
+            <p data-i18n="home.why.f1.p">A family kennel with over 30 years of continuous work, knowledge, bloodlines, and standards refined generation after generation.</p>
+          </li>
+          <li class="why-item">
+            <h3 data-i18n="home.why.f3.h4">Proven working bloodlines</h3>
+            <p data-i18n="home.why.f3.p">Internationally titled parents with verified pedigrees, dogs selected for stable nerves, focus, and drive to work under real pressure.</p>
+          </li>
+          <li class="why-item">
+            <h3 data-i18n="home.why.f4.h4">A name recognized across continents</h3>
+            <p data-i18n="home.why.f4.p">The Simpor name is respected in the working-dog world from Europe to the Middle East and beyond, built over decades of dogs that spoke for themselves.</p>
+          </li>
+          <li class="why-item">
+            <h3 data-i18n="home.why.f5.h4">Tested under real-world pressure</h3>
+            <p data-i18n="home.why.f5.p">Traffic, crowds, restaurants, elevators, gunfire, strangers, night scenarios. A Simpor dog is proofed in the environments it will actually live in.</p>
+          </li>
+          <li class="why-item">
+            <h3 data-i18n="home.why.f6.h4">The standard others try to match</h3>
+            <p data-i18n="home.why.f6.p">When elite families, professionals, and connoisseurs of the breed look for the top of the working line, Simpor is the address they come to.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-band">
+  <figure class="band-media"><img src="images/web/pack-2400.jpg" alt="" loading="lazy"/></figure>
+  <div class="wrap">
+    <div class="section-head center-head">
+      <span class="eyebrow" data-i18n="home.testi.eyebrow">Owners &amp; Handlers</span>
+      <h2 data-i18n="home.testi.h2">What Simpor owners say.</h2>
+    </div>
+
+    <div class="quote-carousel" data-carousel>
+      <span class="qc-mark" aria-hidden="true">&ldquo;</span>
+      <div class="qc-track" aria-live="polite">
+        <figure class="qc-slide is-active">
+          <blockquote data-i18n="home.testi.t1">Our Simpor dog has been part of the family for two years. He is the gentlest companion our children could ask for, and the moment we need him on duty, his focus is instant. Two dogs in one, exactly what we were promised.</blockquote>
+          <figcaption data-i18n="home.testi.t1.a">Filip S., Munich</figcaption>
+        </figure>
+        <figure class="qc-slide" aria-hidden="true">
+          <blockquote data-i18n="home.testi.t2">I have owned working dogs for twenty years. The nerves and stability on this dog, at three years old, is something I have never seen from any other kennel.</blockquote>
+          <figcaption data-i18n="home.testi.t2.a">Aleksandar V., Belgrade</figcaption>
+        </figure>
+        <figure class="qc-slide" aria-hidden="true">
+          <blockquote data-i18n="home.testi.t3">Calm around my family, sharp on command, completely reliable in public. Exactly the balance I was looking for.</blockquote>
+          <figcaption data-i18n="home.testi.t3.a">Omar A., Dubai</figcaption>
+        </figure>
+      </div>
+      <div class="qc-controls">
+        <button class="qc-btn qc-prev" type="button" aria-label="Previous">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        </button>
+        <div class="qc-dots"></div>
+        <button class="qc-btn qc-next" type="button" aria-label="Next">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="center mt-lg">
+      <a href="testimonials.html" class="btn btn-outline btn-arrow" data-i18n="home.testi.btn">Read All Testimonials</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <img class="cta-bg" src="images/dogs2.jpg" alt=""/>
+  <div class="cta-strip-inner">
+    <span class="eyebrow" data-i18n="home.cta.eyebrow">Book a Call</span>
+    <h2 data-i18n="home.cta.h2">Talk to us about what you need.</h2>
+    <p data-i18n="home.cta.p">A short conversation is the fastest way to understand which of our dogs, if any, is right for your household, your travel patterns, and your security concerns.</p>
+    <a href="contact.html" class="btn btn-primary btn-arrow" data-i18n="home.cta.btn">Book an Introductory Call</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="footer-brand">SIM<em>POR</em></a>
+        <p class="footer-about" data-i18n="footer.about">Simpor is a working dog kennel and breeding facility based in Serbia. FCI 3428. Est. 1994.</p>
+        <div class="footer-social" style="margin-top:24px;">
+          <a href="https://www.instagram.com/simpor_dogcentar/" target="_blank" rel="noopener" aria-label="Instagram Dog Center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.instagram.com/simpor_dog_resort/" target="_blank" rel="noopener" aria-label="Instagram Resort">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.facebook.com/simpork9/?locale=sr_RS" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@simpordogcenter" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96C1 8.13 1 12 1 12s0 3.87.46 5.58a2.78 2.78 0 0 0 1.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.97C23 15.87 23 12 23 12s0-3.87-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="footer.h.dogs">Our Dogs</h3>
+        <ul>
+          <li><a href="#dogs-for-sale" data-i18n="footer.dogs.all">All Available Dogs</a></li>
+          <li><a href="#dogs-for-sale" data-i18n="footer.dogs.gsd">German Shepherd</a></li>
+          <li><a href="#dogs-for-sale" data-i18n="footer.dogs.labrador">Labrador</a></li>
+          <li><a href="#dogs-for-sale" data-i18n="footer.dogs.rottweiler">Rottweiler</a></li>
+          <li><a href="#dogs-for-sale" data-i18n="footer.dogs.pointer">Pointer</a></li>
+          <li><a href="#dogs-for-sale" data-i18n="footer.dogs.belgian">Belgian Shepherd</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="footer.h.company">Company</h3>
+        <ul>
+          <li><a href="about.html" data-i18n="footer.about.link">About Simpor</a></li>
+          <li><a href="how-it-works.html" data-i18n="footer.how">How It Works</a></li>
+          <li><a href="testimonials.html" data-i18n="footer.testimonials">Testimonials</a></li>
+          <li><a href="faq.html" data-i18n="footer.faq">FAQ</a></li>
+          <li><a href="https://simpork9.com/training" target="_blank" rel="noopener" data-i18n="footer.training.ext">Training Services →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="footer.h.contact">Contact</h3>
+        <ul>
+          <li><a href="tel:+381644919030">+381 64 4919030</a></li>
+          <li><a href="mailto:Simpordogcentar1@gmail.com">Simpordogcentar1@gmail.com</a></li>
+          <li data-i18n="footer.location">Serbia · Europe</li>
+          <li><a href="contact.html" data-i18n="footer.book">Book a Call</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div data-i18n="footer.copy">© 2026 Simpor Working Kennel. All rights reserved.</div>
+      <div data-i18n="footer.reg">FCI Registration 3428 · Est. 1994</div>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lb" class="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-close" id="lbClose" aria-label="Zatvori">&#215;</button>
+  <button class="lb-arrow lb-prev" id="lbPrev" aria-label="Prethodna">&#8592;</button>
+  <button class="lb-arrow lb-next" id="lbNext" aria-label="Sledeća">&#8594;</button>
+  <div class="lb-img-wrap">
+    <img id="lbImg" alt=""/>
+  </div>
+</div>
+
+<!-- DOG DETAIL MODAL -->
+<div id="dogModal" class="dog-modal" role="dialog" aria-modal="true" aria-label="Dog details">
+  <div class="dog-modal-inner">
+    <button class="dog-modal-close" id="dogModalClose" aria-label="Close">&#215;</button>
+    <div class="dog-modal-body">
+      <div class="dog-modal-gallery">
+        <div class="dog-modal-main">
+          <img id="dogModalMainImg" alt=""/>
+          <button class="dog-modal-nav dog-modal-prev" id="dogModalPrev" aria-label="Previous">&#8592;</button>
+          <button class="dog-modal-nav dog-modal-next" id="dogModalNext" aria-label="Next">&#8594;</button>
+        </div>
+        <div class="dog-modal-thumbs" id="dogModalThumbs"></div>
+      </div>
+      <div class="dog-modal-info">
+        <span class="dog-modal-breed" id="dogModalBreed">Breed</span>
+        <h2 class="dog-modal-name" id="dogModalName">Name</h2>
+        <div class="dog-modal-meta" id="dogModalMeta">Sex · Age · Purpose</div>
+        <p class="dog-modal-desc" id="dogModalDesc">Description</p>
+        <ul class="dog-modal-specs" id="dogModalSpecs"></ul>
+        <div class="dog-modal-price" id="dogModalPrice">On Request</div>
+        <div class="dog-modal-cta">
+          <a href="contact.html" class="btn btn-primary btn-arrow" id="dogModalInquire" data-i18n="modal.inquire">Inquire About This Dog</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/dogs-data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

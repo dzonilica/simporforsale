@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title data-i18n="contact.title">Contact Simpor, Book an Introductory Call</title>
+<meta name="description" content="Book an introductory call with Simpor. Discuss your household, your protection needs, and whether a Simpor dog is right for you."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<script src="js/lang.js" defer></script>
+</head>
+<body>
+
+<div id="loader"><div class="loader-mark">SIM<em>POR</em></div></div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-brand">SIM<em>POR</em></a>
+  <ul class="nav-links">
+    <li><a href="https://simpork9.com/training" target="_blank" rel="noopener" data-i18n="nav.training">Training Services</a></li>
+    <li><a href="available-dogs.html" data-i18n="nav.available">Available Dogs</a></li>
+    <li><a href="about.html" class="has-caret" data-i18n="nav.about">About Us</a>
+      <ul class="submenu">
+        <li><a href="why-simpor.html" data-i18n="nav.about.why">Why Simpor</a></li>
+        <li><a href="about.html" data-i18n="nav.about.approach">Our Approach</a></li>
+        <li><a href="testimonials.html" data-i18n="nav.about.testimonials">Testimonials</a></li>
+      </ul>
+    </li>
+    <li><a href="how-it-works.html" data-i18n="nav.process">Process</a></li>
+    <li><a href="faq.html" data-i18n="nav.faq">FAQ</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:+381644919030" class="nav-login">+381 64 4919030</a>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+      <span class="lang-sep">/</span>
+      <button class="lang-btn" data-lang="sr" onclick="setLang('sr')">SR</button>
+    </div>
+    <a href="contact.html" class="nav-cta" data-i18n="nav.book">Book a Call</a>
+    <button class="hamburger" id="hamburger" data-i18n-aria="nav.hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" data-i18n="mobile.home">Home</a>
+  <a href="https://simpork9.com/training" target="_blank" rel="noopener" data-i18n="mobile.training">Training Services</a>
+  <a href="available-dogs.html" data-i18n="mobile.available">Available Dogs</a>
+  <div class="mobile-submenu">
+    <button class="mobile-submenu-toggle" data-i18n="mobile.about">About Us</button>
+    <div class="mobile-submenu-items">
+      <a href="why-simpor.html" data-i18n="nav.about.why">Why Simpor</a>
+      <a href="about.html" data-i18n="nav.about.approach">Our Approach</a>
+      <a href="testimonials.html" data-i18n="nav.about.testimonials">Testimonials</a>
+    </div>
+  </div>
+  <a href="how-it-works.html" data-i18n="mobile.process">Process</a>
+  <a href="faq.html" data-i18n="mobile.faq">FAQ</a>
+  <a href="contact.html" data-i18n="mobile.contact">Contact</a>
+  <div class="lang-switcher">
+    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    <span class="lang-sep">/</span>
+    <button class="lang-btn" data-lang="sr" onclick="setLang('sr')">SR</button>
+  </div>
+</div>
+
+<section class="page-hero page-hero--image">
+  <div class="page-hero-bg"><img src="images/web/field-2400.jpg" alt="" style="object-position:50% 45%"/></div>
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="contact.hero.eyebrow">Contact</span>
+    <h1 data-i18n="contact.hero.h1">You can contact us here.</h1>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="contact-layout">
+
+      <!-- FORM -->
+      <div>
+        <span class="eyebrow" data-i18n="contact.form.eyebrow">Send a Message</span>
+        <h2 data-i18n="contact.form.h2">Book an introductory call.</h2>
+        <form onsubmit="event.preventDefault(); alert((document.documentElement.getAttribute('lang')==='sr') ? 'Hvala. Javićemo vam se u roku od 24 sata.' : 'Thank you. We will be in touch within 24 hours.');">
+          <div class="form-grid">
+            <div class="form-row">
+              <label data-i18n="contact.form.fn">First name</label>
+              <input type="text" required/>
+            </div>
+            <div class="form-row">
+              <label data-i18n="contact.form.ln">Last name</label>
+              <input type="text" required/>
+            </div>
+            <div class="form-row">
+              <label data-i18n="contact.form.email">Email</label>
+              <input type="email" required/>
+            </div>
+            <div class="form-row">
+              <label data-i18n="contact.form.phone">Phone</label>
+              <input type="tel"/>
+            </div>
+            <div class="form-row">
+              <label data-i18n="contact.form.country">Country</label>
+              <input type="text"/>
+            </div>
+            <div class="form-row full">
+              <label data-i18n="contact.form.msg">Tell us about your household &amp; needs</label>
+              <textarea data-i18n-placeholder="contact.form.msg.ph" placeholder="Where you live, who is in the household, whether you travel, prior working-dog experience, timeline..."></textarea>
+            </div>
+          </div>
+          <div style="margin-top:clamp(24px,5vw,40px)">
+            <button type="submit" class="btn btn-primary btn-arrow" data-i18n="contact.form.submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- SIDE INFO -->
+      <aside>
+        <div class="contact-block">
+          <div class="contact-label" data-i18n="contact.side.phone">Phone</div>
+          <a href="tel:+381644919030" class="contact-value contact-aside-phone">+381 64 4919030</a>
+        </div>
+
+        <div class="contact-block">
+          <div class="contact-label" data-i18n="contact.side.email">Email</div>
+          <a href="mailto:Simpordogcentar1@gmail.com" class="contact-value contact-aside-email">Simpordogcentar1@gmail.com</a>
+        </div>
+
+        <div class="contact-block">
+          <div class="contact-label" data-i18n="contact.side.loc">Location</div>
+          <div class="contact-value" data-i18n="contact.side.loc.val">Brnjica, Kragujevac 34000<br/>Serbia · Europe</div>
+        </div>
+
+        <div class="contact-block">
+          <div class="contact-label" data-i18n="contact.side.hours">Hours</div>
+          <div class="contact-hours" data-i18n="contact.side.hours.val">Monday, Saturday<br/>09:00, 19:00 CET<br/>Sunday by appointment</div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="tight" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" data-i18n="contact.map.eyebrow">Find Us</span>
+      <h2 data-i18n="contact.map.h2">Simpor Dog Center · Serbia.</h2>
+    </div>
+    <div class="contact-map">
+      <iframe
+        src="https://www.google.com/maps?q=Brnjica%2C+Kragujevac%2C+Serbia&output=embed"
+        width="100%"
+        height="100%"
+        style="border:0;display:block;filter:grayscale(0.2);"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Simpor Dog Center map"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="footer-brand">SIM<em>POR</em></a>
+        <p class="footer-about" data-i18n="footer.about">Simpor is a working German Shepherd kennel and protection dog training facility based in Serbia. FCI 3428. Est. 1994.</p>
+        <div class="footer-social" style="margin-top:24px;">
+          <a href="https://www.instagram.com/simpor_dogcentar/" target="_blank" rel="noopener" aria-label="Instagram Dog Center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.instagram.com/simpor_dog_resort/" target="_blank" rel="noopener" aria-label="Instagram Resort">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.facebook.com/simpork9/?locale=sr_RS" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@simpordogcenter" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96C1 8.13 1 12 1 12s0 3.87.46 5.58a2.78 2.78 0 0 0 1.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.97C23 15.87 23 12 23 12s0-3.87-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col"><h3 data-i18n="footer.h.dogs">Our Dogs</h3><ul>
+        <li><a href="index.html#dogs-for-sale" data-i18n="footer.dogs.all">All Available Dogs</a></li>
+        <li><a href="index.html#dogs-for-sale" data-i18n="footer.dogs.gsd">German Shepherd</a></li>
+        <li><a href="index.html#dogs-for-sale" data-i18n="footer.dogs.labrador">Labrador</a></li>
+        <li><a href="index.html#dogs-for-sale" data-i18n="footer.dogs.rottweiler">Rottweiler</a></li>
+        <li><a href="index.html#dogs-for-sale" data-i18n="footer.dogs.pointer">Pointer</a></li>
+        <li><a href="index.html#dogs-for-sale" data-i18n="footer.dogs.belgian">Belgian Shepherd</a></li>
+        <li><a href="https://simpork9.com/training" target="_blank" rel="noopener" data-i18n="footer.training.ext">Training Services →</a></li>
+      </ul></div>
+      <div class="footer-col"><h3 data-i18n="footer.h.company">Company</h3><ul>
+        <li><a href="about.html" data-i18n="footer.about.link">About Simpor</a></li>
+        <li><a href="how-it-works.html" data-i18n="footer.how">How It Works</a></li>
+        <li><a href="testimonials.html" data-i18n="footer.testimonials">Testimonials</a></li>
+        <li><a href="faq.html" data-i18n="footer.faq">FAQ</a></li>
+      </ul></div>
+      <div class="footer-col"><h3 data-i18n="footer.h.contact">Contact</h3><ul>
+        <li><a href="tel:+381644919030">+381 64 4919030</a></li>
+        <li><a href="mailto:Simpordogcentar1@gmail.com">Simpordogcentar1@gmail.com</a></li>
+        <li data-i18n="footer.location">Serbia · Europe</li>
+        <li><a href="contact.html" data-i18n="footer.book">Book a Call</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div data-i18n="footer.copy">© 2026 Simpor Working Kennel. All rights reserved.</div>
+      <div data-i18n="footer.reg">FCI Registration 3428 · Est. 1994</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
